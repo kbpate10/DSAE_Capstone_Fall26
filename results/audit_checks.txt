@@ -1,0 +1,43 @@
+=== 1. OSM mapped data centers vs siting score ===
+  OSM features: 65 | inside a candidate cell: 64 | outside (cannot be scored): 1
+  all mapped: 64 features in 8 cells | median rank of those cells 160 of 192 (other cells: 94) | share of cells in bottom third: 75% | Mann-Whitney p (hosting cells rank worse) = 0.0071
+  with operator tag: 31 features in 7 cells | median rank of those cells 155 of 192 (other cells: 94) | share of cells in bottom third: 71% | Mann-Whitney p (hosting cells rank worse) = 0.0278
+  cells with most mapped data centers (cell, n, county, rank, depth ft, summer wet-bulb C):
+    133_-448  n=26  Maricopa  rank 164  depth 101  tw 20.7
+    133_-447  n=13  Maricopa  rank 172  depth 246  tw 20.7
+    133_-450  n= 8  Maricopa  rank 155  depth 112  tw 20.9
+    133_-449  n= 7  Maricopa  rank 131  depth 114  tw 20.7
+    134_-448  n= 5  Maricopa  rank 191  depth 278  tw 20.7
+    134_-449  n= 3  Maricopa  rank 167  depth 279  tw 20.7
+    127_-442  n= 1  Cochise   rank  59  depth 147  tw 17.9
+    128_-444  n= 1  Pima      rank 103  depth 235  tw 17.9
+  mapped data centers in the 192 cells' top tercile: 1 of 64
+  named operators and ranks (sample):
+                                 name                    operator   county  rank
+        Iron Mountain Records Storage               Iron Mountain Maricopa   131
+                                Lumen          Lumen Technologies Maricopa   131
+     Flexential Phoenix - Deer Valley                  Flexential Maricopa   167
+                           EdgeConneX                  EdgeConneX Maricopa   164
+           Digital Realty Data Center              Digital Realty Maricopa   164
+                   Cogent Data Center Cogent Communications, Inc. Maricopa   131
+                           H5 Phoenix                          H5 Maricopa   164
+                                  NaN                    CyrusOne Maricopa   164
+                    Apple Data Center                  Apple Inc. Maricopa   172
+Centersquare: Phoenix - (PHX1 - Mesa)                Centersquare Maricopa   164
+                  Iron Mountain AZP-2               Iron Mountain Maricopa   164
+                               PHX-10                   Microsoft Maricopa   155
+                                  NaN                     DirecTV     Pima   103
+         EdgeConneX PHX02 Data Center                  EdgeConneX Maricopa   172
+
+=== 2. RQ3 with consistent reporting standard ===
+  utilities that switch ieee/other: 178 of 1155
+  main specification (all rows)                    n= 9245  effect per +10% load: +0.66% [-1.13, +2.48]
+  drop utilities that switch standards             n= 7606  effect per +10% load: +0.52% [-1.46, +2.53]
+  IEEE-standard rows only                          n= 7015  effect per +10% load: +0.12% [-1.90, +2.18]
+  all rows + 'other standard' indicator            n= 9245  effect per +10% load: +0.63% [-1.15, +2.45]
+
+=== 3. Offset between EIA-930 hour labels and weather (carbon-only policy, pooled, 8h) ===
+ weather_shift_h  corr_C_Won_AZPS  corr_C_Won_SRP  carbonOnly_carbon%  carbonOnly_water%  balanced_carbon%  balanced_water%
+              -1            -0.59           -0.53               17.71              -0.13             14.11             4.02
+               0            -0.63           -0.50               17.71              -0.11             14.27             3.68
+               1            -0.61           -0.40               17.71               0.52             14.55             4.10
