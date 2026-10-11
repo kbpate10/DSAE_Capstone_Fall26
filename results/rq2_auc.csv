@@ -1,0 +1,5 @@
+model,cv,auc
+logistic,random 5-fold,0.9801025390625
+logistic,leave-county-out,0.9801025390625
+lightgbm,random 5-fold,0.9857177734375
+lightgbm,leave-county-out,0.963623046875

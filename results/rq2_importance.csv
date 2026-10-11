@@ -1,0 +1,7 @@
+,mean_abs_shap,logit_coef_std
+ghi_kwh,0.535,0.568
+gw_depth_med,4.341,-3.052
+gw_trend,0.146,-0.209
+q_active_mw,3.082,-3.116
+trend_missing,0.003,0.27
+wetbulb_summer_c,1.655,-0.996
