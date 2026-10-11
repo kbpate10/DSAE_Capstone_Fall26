@@ -1,0 +1,41 @@
+=== CARBON ===
+annual mean CI:
+ respondent   AZPS    SRP   TEPC   WALC
+year                                  
+2021        546.0  218.0  604.0  188.0
+2022        587.0  201.0  601.0  162.0
+2023        500.0  230.0  509.0  200.0
+2024        482.0  215.0  442.0  201.0
+2025        428.0  221.0  448.0  194.0
+diurnal range (max-min hourly mean, all years): {'AZPS': 158.0, 'SRP': 70.0, 'TEPC': 116.0, 'WALC': 68.0}
+ACF lag 1/24/168: {'AZPS': [np.float64(0.97), np.float64(0.91), np.float64(0.75)], 'SRP': [np.float64(0.95), np.float64(0.88), np.float64(0.73)], 'TEPC': [np.float64(0.98), np.float64(0.87), np.float64(0.67)], 'WALC': [np.float64(0.95), np.float64(0.85), np.float64(0.69)]}
+solar share of generation by year, AZPS: {2021: 0.086, 2022: 0.077, 2023: 0.086, 2024: 0.134, 2025: 0.213}
+solar share by year, SRP: {2021: 0.017, 2022: 0.02, 2023: 0.026, 2024: 0.056, 2025: 0.061}
+EIA day-ahead demand forecast MAPE % by BA: {'AZPS': 3.3, 'SRP': 2.2, 'TEPC': 4.6, 'WALC': 7.1} (median APE)
+corr(wet-bulb, demand) by BA: {'AZPS': np.float64(0.66), 'SRP': np.float64(0.61), 'TEPC': np.float64(0.57), 'WALC': np.float64(0.2)}
+flagged share by BA: {'AZPS': 0.22, 'SRP': 0.11, 'TEPC': 1.94, 'WALC': 0.33}
+negative-value share by fuel (SUN): 4.5 %
+
+=== RELIABILITY PANEL ===
+rows (cleaned): 11845 | utilities: 1255 | years: 2013 - 2024
+obs per utility: median 12 | share with all 12 yrs: 54.3 %
+ownership counts: {'Cooperative': 5851, 'Municipal': 3449, 'Investor Owned': 1992, 'Political Subdivision': 469, 'State': 83, 'Federal': 1}
+median SAIDI by ownership (no MED): {'Cooperative': 130.0, 'Federal': nan, 'Investor Owned': 108.0, 'Municipal': 35.0, 'Political Subdivision': 71.0, 'State': 58.0}
+SAIDI no-MED: quantiles {0.05: 11.0, 0.25: 52.0, 0.5: 99.0, 0.75: 168.0, 0.95: 383.0}
+with-MED/no-MED ratio median: 1.44
+within-utility sd of ln SAIDI: large utilities 0.27 vs small 0.48
+exposure: sd 0.067 | share > +10%: 5.6% | share > +20%: 1.8%
+exposure by year (mean, share>10%): {2013: '+nan, 0.0%', 2014: '+0.009, 4.3%', 2015: '-0.003, 3.7%', 2016: '+0.002, 5.3%', 2017: '-0.007, 4.0%', 2018: '+0.018, 6.8%', 2019: '-0.016, 3.7%', 2020: '-0.060, 2.2%', 2021: '+0.024, 6.7%', 2022: '+0.023, 9.1%', 2023: '-0.008, 7.2%', 2024: '+0.007, 6.6%'}
+AZ C&I TWh 2020 -> 2024: {'Arizona Public Service Co': (np.float64(14.6), np.float64(18.1)), 'Salt River Project': (np.float64(15.7), np.float64(18.3)), 'Tucson Electric Power Co': (np.float64(4.9), np.float64(5.0)), 'UNS Electric, Inc': (np.float64(0.8), np.float64(0.9))}
+
+=== WATER / QUEUE ===
+GWSI sites: 45985 | last measured since 2015: 9675 | before 2000: 18438
+depth-to-water (since 2015) quantiles ft: {0.1: 29.0, 0.25: 71.0, 0.5: 168.0, 0.75: 305.0, 0.9: 439.0}
+  Phoenix metro: n=803 median depth 180 ft, p90 385 ft
+  Pinal / Casa Grande: n=1087 median depth 207 ft, p90 468 ft
+  Tucson: n=886 median depth 177 ft, p90 355 ft
+negative depth (flowing) share: 0.1 % | zero: 24.4 %
+AZ queue GW by status: {'active': 106.6, 'operational': 14.2, 'suspended': 2.0, 'withdrawn': 198.8}
+AZ active queue GW by type: {'Solar+Battery': 62.1, 'Other': 18.9, 'Battery': 10.6, 'Wind': 4.4, 'Gas': 3.4, 'Solar': 2.6}
+AZ queue entries by status: {'withdrawn': 699, 'active': 273, 'operational': 69, 'suspended': 8} | withdrawn share: 67%
+candidate cells score: mean 0.50 sd 0.15 | corr(depth, wetbulb) 0.10 | corr(depth, queue) 0.27 | corr(ghi, wetbulb) 0.83
