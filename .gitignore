@@ -1,0 +1,12 @@
+.env
+data/
+__pycache__/
+.venv/
+*.pyc
+*.log
+.DS_Store
+# course documents with team names and charter (kept local)
+*.docx
+# pre-fix snapshots from the audit
+results/_audit_before/
+CLAUDE.md
