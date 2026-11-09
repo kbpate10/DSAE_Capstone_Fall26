@@ -1,0 +1,1155 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-10-11T09:56:36Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 7557854384,
+  "lat": 33.3804149,
+  "lon": -111.7526684,
+  "tags": {
+    "addr:city": "Mesa",
+    "addr:housenumber": "1955",
+    "addr:postcode": "85206",
+    "addr:state": "AZ",
+    "addr:street": "South Val Vista Drive",
+    "name": "OptimumHQ",
+    "source": "esri/USA_NAD_Addresses",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 7557868585,
+  "lat": 33.3806010,
+  "lon": -111.7528888,
+  "tags": {
+    "addr:city": "Mesa",
+    "addr:housenumber": "1955",
+    "addr:postcode": "85206",
+    "addr:state": "AZ",
+    "addr:street": "South Val Vista Drive",
+    "name": "The Chatfield Group",
+    "source": "esri/USA_NAD_Addresses",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 7578821329,
+  "lat": 33.3199157,
+  "lon": -111.8096860,
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:housenumber": "1909",
+    "addr:postcode": "85225",
+    "addr:state": "AZ",
+    "addr:street": "East Ray Road",
+    "name": "All About Serving Process Server",
+    "source": "esri/USA_NAD_Addresses",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 7737996606,
+  "lat": 33.3029650,
+  "lon": -111.8405386,
+  "tags": {
+    "name": "Emailage",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 7821940847,
+  "lat": 33.3799862,
+  "lon": -111.7284050,
+  "tags": {
+    "addr:city": "Mesa",
+    "addr:housenumber": "4850",
+    "addr:postcode": "85206",
+    "addr:state": "AZ",
+    "addr:street": "East Baseline Road",
+    "name": "Alliance Technology",
+    "source": "esri/USA_NAD_Addresses",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 10796113031,
+  "lat": 33.6273670,
+  "lon": -111.9017033,
+  "tags": {
+    "name": "VaultLogix",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 10796113033,
+  "lat": 33.6272477,
+  "lon": -111.9020476,
+  "tags": {
+    "name": "Profit Finder Pro Software",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 10798644674,
+  "lat": 33.6116624,
+  "lon": -111.9139825,
+  "tags": {
+    "name": "DataPro USA Web Development",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 10938672218,
+  "lat": 33.6344843,
+  "lon": -111.8843457,
+  "tags": {
+    "name": "K-Motion Interactive",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 11018926315,
+  "lat": 33.6446663,
+  "lon": -111.8960985,
+  "tags": {
+    "name": "Iron Mountain Data Centers AZS-1",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 11113161710,
+  "lat": 33.6647455,
+  "lon": -112.1117142,
+  "tags": {
+    "name": "Accelera Data Systems",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 11938614120,
+  "lat": 33.4051307,
+  "lon": -111.9773353,
+  "tags": {
+    "name": "Alembic Computer Services, Inc.",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 11938631189,
+  "lat": 33.4131856,
+  "lon": -111.9711539,
+  "tags": {
+    "name": "J-Curve Technologies",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "node",
+  "id": 13019681063,
+  "lat": 33.3566787,
+  "lon": -111.6352356,
+  "tags": {
+    "addr:city": "Mesa",
+    "addr:housenumber": "3223",
+    "addr:postcode": "85212",
+    "addr:state": "AZ",
+    "addr:street": "South Ellsworth Road",
+    "name": "Comarch",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 131891022,
+  "center": {
+    "lat": 33.4203800,
+    "lon": -112.0413257
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:housenumber": "2859",
+    "addr:postcode": "85034",
+    "addr:state": "AZ",
+    "addr:street": "South 18th Place",
+    "building": "yes",
+    "name": "Iron Mountain Records Storage",
+    "operator": "Iron Mountain",
+    "operator:wikidata": "Q1673079",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 151179323,
+  "center": {
+    "lat": 33.4943090,
+    "lon": -112.0707916
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:country": "US",
+    "addr:housenumber": "215",
+    "addr:state": "AZ",
+    "addr:street": "East Indian School Road",
+    "building": "yes",
+    "name": "Lumen",
+    "not:brand:wikidata": "Q110391616",
+    "operator": "Lumen Technologies",
+    "operator:wikidata": "Q5063092",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 152163711,
+  "center": {
+    "lat": 33.3053366,
+    "lon": -111.6716904
+  },
+  "tags": {
+    "building": "yes",
+    "name": "L3Harris Technologies Inc",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 152163722,
+  "center": {
+    "lat": 33.3062801,
+    "lon": -111.6717217
+  },
+  "tags": {
+    "building": "yes",
+    "name": "AZ Labs",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 155739337,
+  "center": {
+    "lat": 33.6590546,
+    "lon": -112.1111595
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:country": "US",
+    "addr:housenumber": "2500",
+    "addr:postcode": "85027-5139",
+    "addr:state": "AZ",
+    "addr:street": "West Union Hills Drive",
+    "building": "commercial",
+    "building:levels": "1",
+    "name": "Aligned Energy Data Center",
+    "source": "https://www.datacenters.com/aligned-energy-phoenix-az",
+    "start_date": "2017",
+    "telecom": "data_center",
+    "website": "https://aligneddc.com/phoenix/"
+  }
+},
+{
+  "type": "way",
+  "id": 157362579,
+  "center": {
+    "lat": 33.6846775,
+    "lon": -112.0983398
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:country": "US",
+    "addr:housenumber": "1850",
+    "addr:postcode": "85027",
+    "addr:state": "AZ",
+    "addr:street": "West Deer Valley Road",
+    "building": "commercial",
+    "building:levels": "2",
+    "name": "Flexential Phoenix - Deer Valley",
+    "operator": "Flexential",
+    "operator:wikidata": "Q115417504",
+    "telecom": "data_center",
+    "website": "https://www.flexential.com/data-centers/az/phoenix/deer-valley-data-center"
+  }
+},
+{
+  "type": "way",
+  "id": 210917861,
+  "center": {
+    "lat": 33.4216928,
+    "lon": -112.0343031
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:country": "US",
+    "addr:housenumber": "2223",
+    "addr:postcode": "85034",
+    "addr:state": "AZ",
+    "addr:street": "East Magnolia Street",
+    "building": "yes",
+    "name": "Data Storage Centers",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 220014929,
+  "center": {
+    "lat": 33.3955466,
+    "lon": -111.9700881
+  },
+  "tags": {
+    "addr:city": "Tempe",
+    "addr:housenumber": "3011",
+    "addr:postcode": "85282",
+    "addr:state": "AZ",
+    "addr:street": "South 52nd Street",
+    "building": "yes",
+    "name": "EdgeConneX",
+    "operator": "EdgeConneX",
+    "operator:wikidata": "Q115477226",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 220518160,
+  "center": {
+    "lat": 33.3446197,
+    "lon": -111.8992189
+  },
+  "tags": {
+    "addr:city": "Tempe",
+    "addr:housenumber": "2055",
+    "addr:postcode": "85284",
+    "addr:state": "AZ",
+    "addr:street": "East Technology Circle",
+    "building": "yes",
+    "name": "Digital Realty Data Center",
+    "operator": "Digital Realty",
+    "operator:wikidata": "Q5275969",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 244490839,
+  "center": {
+    "lat": 33.4160770,
+    "lon": -112.0094718
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:housenumber": "3402",
+    "addr:postcode": "85034",
+    "addr:state": "AZ",
+    "addr:street": "East University Drive",
+    "building": "yes",
+    "name": "PhoenixNAP",
+    "telecom": "data_center",
+    "website": "https://phoenixnap.com/data-center/phoenix"
+  }
+},
+{
+  "type": "way",
+  "id": 290307022,
+  "center": {
+    "lat": 33.4002195,
+    "lon": -112.0478786
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:country": "US",
+    "addr:housenumber": "1530",
+    "addr:postcode": "85040",
+    "addr:state": "AZ",
+    "addr:street": "East Roeser Road",
+    "building": "commercial",
+    "name": "Cogent Data Center",
+    "operator": "Cogent Communications, Inc.",
+    "source": "esri/USA_NAD_Addresses;esri_USDOT_Arizona",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 300952513,
+  "center": {
+    "lat": 33.2749228,
+    "lon": -111.8866379
+  },
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:country": "US",
+    "addr:housenumber": "2121",
+    "addr:postcode": "85286",
+    "addr:state": "AZ",
+    "addr:street": "South Price Road",
+    "building": "yes",
+    "name": "Digital Realty Phoenix PHX15",
+    "operator": "Digital Realty",
+    "operator:wikidata": "Q5275969",
+    "ref": "PHX15",
+    "source": "MapBox Satellite for the expansion of the building to the north.",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 300959969,
+  "center": {
+    "lat": 33.2769993,
+    "lon": -111.8858906
+  },
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:country": "US",
+    "addr:housenumber": "2600",
+    "addr:postcode": "85286",
+    "addr:state": "AZ",
+    "addr:street": "West Germann Road",
+    "building": "yes",
+    "name": "H5 Phoenix",
+    "operator": "H5",
+    "ref": "Phoenix",
+    "telecom": "data_center",
+    "website": "https://h5datacenters.com/phoenix-data-center.html"
+  }
+},
+{
+  "type": "way",
+  "id": 300959970,
+  "center": {
+    "lat": 33.2708761,
+    "lon": -111.8819478
+  },
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:country": "US",
+    "addr:housenumber": "2335",
+    "addr:postcode": "85286",
+    "addr:state": "AZ",
+    "addr:street": "South Ellis Street",
+    "addr:unit": "B",
+    "building": "commercial",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "PHX1",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/north-america/chandler-arizona"
+  }
+},
+{
+  "type": "way",
+  "id": 300974499,
+  "center": {
+    "lat": 33.3470334,
+    "lon": -111.6041418
+  },
+  "tags": {
+    "addr:city": "Mesa",
+    "addr:housenumber": "3740",
+    "addr:postcode": "85212",
+    "addr:state": "AZ",
+    "addr:street": "South Signal Butte Road",
+    "building": "industrial",
+    "building:use": "data_center",
+    "name": "Apple Data Center",
+    "operator": "Apple Inc.",
+    "operator:wikidata": "Q312",
+    "owner": "Platypus Development LLC",
+    "source": "https://www.datacenters.com/apple-inc-mesa",
+    "start_date": "2012",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 468707940,
+  "center": {
+    "lat": 33.4194907,
+    "lon": -112.3599883
+  },
+  "tags": {
+    "addr:city": "Goodyear",
+    "addr:housenumber": "2950",
+    "addr:postcode": "85338",
+    "addr:state": "AZ",
+    "addr:street": "South Litchfield Road",
+    "building": "warehouse",
+    "building:levels": "1",
+    "height": "12.5",
+    "name": "Stream Data Centers PHX-1",
+    "source": "esri/USA_NAD_Addresses",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 530982335,
+  "center": {
+    "lat": 33.3619309,
+    "lon": -111.8392899
+  },
+  "tags": {
+    "addr:city": "Gilbert",
+    "addr:housenumber": "2299",
+    "addr:postcode": "85233",
+    "addr:state": "AZ",
+    "addr:street": "West Obispo Avenue",
+    "building": "yes",
+    "name": "GoDaddy - Gilbert",
+    "source": "esri_USDOT_Arizona",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 543117031,
+  "center": {
+    "lat": 33.4212542,
+    "lon": -111.8590191
+  },
+  "tags": {
+    "addr:city": "Mesa",
+    "addr:housenumber": "1301",
+    "addr:postcode": "85201",
+    "addr:state": "AZ",
+    "addr:street": "West University Drive",
+    "building": "yes",
+    "clli": "MESAAZLB",
+    "name": "Centersquare: Phoenix - (PHX1 - Mesa)",
+    "operator": "Centersquare",
+    "operator:wikidata": "Q127304226",
+    "source": "https://www.datacenters.com/centersquare-phoenix-phx1-mesa",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 567575425,
+  "center": {
+    "lat": 33.3470334,
+    "lon": -111.6042679
+  },
+  "tags": {
+    "building": "yes",
+    "roof:shape": "flat",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 685011021,
+  "center": {
+    "lat": 33.4521575,
+    "lon": -111.9772945
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:housenumber": "4802",
+    "addr:postcode": "85008",
+    "addr:state": "AZ",
+    "addr:street": "East Van Buren Street",
+    "name": "Iron Mountain AZP-2",
+    "operator": "Iron Mountain",
+    "operator:wikidata": "Q1673079",
+    "ref": "AZP-2",
+    "telecom": "data_center",
+    "website": "https://www.ironmountain.com/data-centers/locations/phoenix-data-center"
+  }
+},
+{
+  "type": "way",
+  "id": 781370600,
+  "center": {
+    "lat": 33.2676353,
+    "lon": -111.8824933
+  },
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:housenumber": "2335",
+    "addr:postcode": "85286",
+    "addr:state": "AZ",
+    "addr:street": "South Ellis Street",
+    "addr:unit": "E",
+    "building": "yes",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "PHX6",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/north-america/chandler-arizona"
+  }
+},
+{
+  "type": "way",
+  "id": 795384117,
+  "center": {
+    "lat": 33.4079462,
+    "lon": -112.3648297
+  },
+  "tags": {
+    "addr:city": "Goodyear",
+    "addr:housenumber": "14250",
+    "addr:postcode": "85338",
+    "addr:state": "AZ",
+    "addr:street": "West Broadway Road",
+    "building": "yes",
+    "name": "PHX-10",
+    "operator": "Microsoft",
+    "operator:wikidata": "Q2283",
+    "ref": "PHX-10",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 808979618,
+  "center": {
+    "lat": 33.3441489,
+    "lon": -111.6195880
+  },
+  "tags": {
+    "addr:city": "Mesa",
+    "addr:housenumber": "3856",
+    "addr:postcode": "85212",
+    "addr:state": "AZ",
+    "addr:street": "South Everton Terrace",
+    "building": "yes",
+    "name": "EdgeCore",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 828228235,
+  "center": {
+    "lat": 33.3426083,
+    "lon": -111.8409621
+  },
+  "tags": {
+    "building": "yes",
+    "name": "StrongMind",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 835601088,
+  "center": {
+    "lat": 37.0627990,
+    "lon": -113.5447485
+  },
+  "tags": {
+    "building": "house",
+    "name": "Lumen",
+    "operator": "Lumen Technologies",
+    "operator:wikidata": "Q5063092",
+    "source": "microsoft/BuildingFootprints",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 836947535,
+  "center": {
+    "lat": 33.4754208,
+    "lon": -111.7191652
+  },
+  "tags": {
+    "building": "yes",
+    "healthcare:speciality": "neurology",
+    "name": "Myndshift Technologies",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 843314844,
+  "center": {
+    "lat": 32.0927065,
+    "lon": -110.7874236
+  },
+  "tags": {
+    "addr:city": "Tucson",
+    "addr:housenumber": "9608",
+    "addr:postcode": "85747",
+    "addr:state": "AZ",
+    "addr:street": "East Old Vail Road",
+    "building": "data_center",
+    "operator": "DirecTV",
+    "operator:wikidata": "Q1056839",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 938592711,
+  "center": {
+    "lat": 33.4393768,
+    "lon": -112.3770480
+  },
+  "tags": {
+    "addr:city": "Goodyear",
+    "addr:housenumber": "850",
+    "addr:postcode": "85338",
+    "addr:state": "AZ",
+    "addr:street": "South Bullard Avenue",
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 940821791,
+  "center": {
+    "lat": 33.3944358,
+    "lon": -111.9525168
+  },
+  "tags": {
+    "addr:city": "Tempe",
+    "addr:housenumber": "1005",
+    "addr:postcode": "85282",
+    "addr:state": "AZ",
+    "addr:street": "West Geneva Drive",
+    "building": "yes",
+    "name": "Omnis Network",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 952157194,
+  "center": {
+    "lat": 33.3965617,
+    "lon": -112.0001645
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:housenumber": "3719",
+    "addr:postcode": "85040",
+    "addr:state": "AZ",
+    "addr:street": "East La Salle Street",
+    "building": "yes",
+    "name": "1GServers",
+    "source": "microsoft/BuildingFootprints;esri/USA_NAD_Addresses",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 977653854,
+  "center": {
+    "lat": 33.2663809,
+    "lon": -111.8818702
+  },
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:housenumber": "2335",
+    "addr:postcode": "85286",
+    "addr:state": "AZ",
+    "addr:street": "South Ellis Street",
+    "addr:unit": "F",
+    "building": "yes",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "PHX7",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/north-america/chandler-arizona"
+  }
+},
+{
+  "type": "way",
+  "id": 977653858,
+  "center": {
+    "lat": 33.2687780,
+    "lon": -111.8825216
+  },
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:housenumber": "2335",
+    "addr:postcode": "85286",
+    "addr:state": "AZ",
+    "addr:street": "South Ellis Street",
+    "addr:unit": "D",
+    "building": "yes",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "PHX4",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/north-america/chandler-arizona"
+  }
+},
+{
+  "type": "way",
+  "id": 977653859,
+  "center": {
+    "lat": 33.2697268,
+    "lon": -111.8815437
+  },
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:housenumber": "2335",
+    "addr:postcode": "85286",
+    "addr:state": "AZ",
+    "addr:street": "South Ellis Street",
+    "addr:unit": "C",
+    "building": "yes",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "PHX5",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/north-america/chandler-arizona"
+  }
+},
+{
+  "type": "way",
+  "id": 1015704066,
+  "center": {
+    "lat": 33.3520091,
+    "lon": -111.6475291
+  },
+  "tags": {
+    "addr:city": "Mesa",
+    "addr:housenumber": "8604",
+    "addr:postcode": "85212",
+    "addr:state": "AZ",
+    "addr:street": "East Elliot Road",
+    "building": "yes",
+    "name": "EdgeConneX PHX02 Data Center",
+    "operator": "EdgeConneX",
+    "operator:wikidata": "Q115477226",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1042260902,
+  "center": {
+    "lat": 31.9726748,
+    "lon": -110.3047517
+  },
+  "tags": {
+    "addr:city": "Benson",
+    "addr:housenumber": "401",
+    "addr:postcode": "85602",
+    "addr:state": "AZ",
+    "addr:street": "Direct Way",
+    "building": "data_center",
+    "operator": "DirecTV",
+    "operator:wikidata": "Q1056839",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1052182309,
+  "center": {
+    "lat": 33.4933506,
+    "lon": -112.0705502
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:housenumber": "4010",
+    "addr:postcode": "85012",
+    "addr:state": "AZ",
+    "addr:street": "North 3rd Street",
+    "building": "no",
+    "telecom": "data_center",
+    "website": "https://www.4010datacenter.com"
+  }
+},
+{
+  "type": "way",
+  "id": 1091128478,
+  "center": {
+    "lat": 33.4090306,
+    "lon": -112.3648272
+  },
+  "tags": {
+    "addr:city": "Goodyear",
+    "addr:housenumber": "14250",
+    "addr:postcode": "85338",
+    "addr:state": "AZ",
+    "addr:street": "West Broadway Road",
+    "building": "yes",
+    "name": "PHX-11",
+    "operator": "Microsoft",
+    "operator:wikidata": "Q2283",
+    "ref": "PHX-11",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1132632705,
+  "center": {
+    "lat": 33.4608806,
+    "lon": -111.9971562
+  },
+  "tags": {
+    "addr:country": "US",
+    "addr:state": "AZ",
+    "building": "yes",
+    "name": "QTS",
+    "operator": "Quality Technology Services",
+    "operator:short": "QTS",
+    "operator:wikidata": "Q18392800",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1227682824,
+  "center": {
+    "lat": 33.2663490,
+    "lon": -111.8833010
+  },
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:housenumber": "2335",
+    "addr:postcode": "85286",
+    "addr:state": "AZ",
+    "addr:street": "South Ellis Street",
+    "addr:unit": "F",
+    "building": "yes",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "PHX8",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/north-america/chandler-arizona"
+  }
+},
+{
+  "type": "way",
+  "id": 1227684019,
+  "center": {
+    "lat": 33.2719170,
+    "lon": -111.8816145
+  },
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:housenumber": "2335",
+    "addr:postcode": "85286",
+    "addr:state": "AZ",
+    "addr:street": "South Ellis Street",
+    "addr:unit": "A",
+    "building": "industrial",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "PHX3",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/north-america/chandler-arizona"
+  }
+},
+{
+  "type": "way",
+  "id": 1227684020,
+  "center": {
+    "lat": 33.2718119,
+    "lon": -111.8832479
+  },
+  "tags": {
+    "addr:city": "Chandler",
+    "addr:housenumber": "2335",
+    "addr:postcode": "85286",
+    "addr:state": "AZ",
+    "addr:street": "South Ellis Street",
+    "addr:unit": "A",
+    "building": "industrial",
+    "operator": "CyrusOne",
+    "operator:wikidata": "Q16953751",
+    "ref": "PHX4",
+    "telecom": "data_center",
+    "website": "https://www.cyrusone.com/data-centers/north-america/chandler-arizona"
+  }
+},
+{
+  "type": "way",
+  "id": 1283734104,
+  "center": {
+    "lat": 33.4463027,
+    "lon": -112.3738867
+  },
+  "tags": {
+    "addr:city": "Goodyear",
+    "addr:housenumber": "45",
+    "addr:postcode": "85338",
+    "addr:state": "AZ",
+    "addr:street": "South Bullard Avenue",
+    "building": "yes",
+    "name": "Vantage Data Centers",
+    "operator": "Vantage Data Centers",
+    "operator:wikidata": "Q133440987",
+    "source": "esri/USA_NAD_Addresses",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1315636714,
+  "center": {
+    "lat": 33.4646803,
+    "lon": -111.9975601
+  },
+  "tags": {
+    "building": "yes",
+    "name": "QTS",
+    "operator": "Quality Technology Services",
+    "operator:short": "QTS",
+    "operator:wikidata": "Q18392800",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1357825755,
+  "center": {
+    "lat": 33.4547261,
+    "lon": -111.9762182
+  },
+  "tags": {
+    "addr:city": "Phoenix",
+    "addr:housenumber": "615",
+    "addr:postcode": "85008",
+    "addr:state": "AZ",
+    "addr:street": "North 48th Street",
+    "name": "Iron Mountain AZP-1",
+    "operator": "Iron Mountain",
+    "operator:wikidata": "Q1673079",
+    "ref": "AZP-1",
+    "telecom": "data_center",
+    "website": "https://www.ironmountain.com/data-centers/locations/phoenix-data-center"
+  }
+},
+{
+  "type": "way",
+  "id": 1372772726,
+  "center": {
+    "lat": 33.3531912,
+    "lon": -111.6780726
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1456975947,
+  "center": {
+    "lat": 33.3471979,
+    "lon": -111.6324603
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1456975948,
+  "center": {
+    "lat": 33.3463331,
+    "lon": -111.6289144
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1456975949,
+  "center": {
+    "lat": 33.3471890,
+    "lon": -111.6257923
+  },
+  "tags": {
+    "building": "yes",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1532070752,
+  "center": {
+    "lat": 33.4102344,
+    "lon": -112.3648662
+  },
+  "tags": {
+    "addr:city": "Goodyear",
+    "addr:housenumber": "14250",
+    "addr:postcode": "85338",
+    "addr:state": "AZ",
+    "addr:street": "West Broadway Road",
+    "building": "yes",
+    "name": "PHX-12",
+    "operator": "Microsoft",
+    "operator:wikidata": "Q2283",
+    "ref": "PHX-12",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1532070753,
+  "center": {
+    "lat": 33.4115438,
+    "lon": -112.3648536
+  },
+  "tags": {
+    "addr:city": "Goodyear",
+    "addr:housenumber": "14250",
+    "addr:postcode": "85338",
+    "addr:state": "AZ",
+    "addr:street": "West Broadway Road",
+    "building": "yes",
+    "name": "PHX-13",
+    "operator": "Microsoft",
+    "operator:wikidata": "Q2283",
+    "ref": "PHX-13",
+    "telecom": "data_center"
+  }
+},
+{
+  "type": "way",
+  "id": 1532070754,
+  "center": {
+    "lat": 33.4127955,
+    "lon": -112.3648636
+  },
+  "tags": {
+    "addr:city": "Goodyear",
+    "addr:housenumber": "14250",
+    "addr:postcode": "85338",
+    "addr:state": "AZ",
+    "addr:street": "West Broadway Road",
+    "building": "yes",
+    "name": "PHX-14",
+    "operator": "Microsoft",
+    "operator:wikidata": "Q2283",
+    "ref": "PHX-14",
+    "telecom": "data_center"
+  }
+}
+
+  ]
+}
