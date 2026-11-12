@@ -23,4 +23,23 @@ for y in $(seq 2013 2024); do
   unzip -q -o "data/raw/eia861/f861$y.zip" -d "data/raw/eia861/$y"
   rm "data/raw/eia861/f861$y.zip"
 done
+# EIA-860 (generators, plants, cooling systems) and EIA-923 (generation, Schedule 8D cooling water), 2025 data year
+mkdir -p data/raw/eia860 data/raw/eia923
+if [ ! -f data/raw/eia860/2___Plant_Y2025.xlsx ]; then
+  curl -sSL -A "$UA" -o data/raw/eia860/eia8602025.zip "https://www.eia.gov/electricity/data/eia860/xls/eia8602025.zip"
+  unzip -q -o data/raw/eia860/eia8602025.zip -d data/raw/eia860
+fi
+if [ ! -f data/raw/eia923/EIA923_Schedule_8_Annual_Envir_Infor_2025_Final.xlsx ]; then
+  curl -sSL -A "$UA" -o data/raw/eia923/f923_2025.zip "https://www.eia.gov/electricity/data/eia923/xls/f923_2025.zip"
+  unzip -q -o data/raw/eia923/f923_2025.zip -d data/raw/eia923
+fi
+# EPA CAMPD measured hourly plant emissions (public bulk files, no key): Arizona plants, plus New Mexico because EIA-923 assigns Four Corners to AZPS
+mkdir -p data/raw/campd_az
+for st in az nm; do
+  for y in 2021 2022 2023 2024 2025; do
+    f="data/raw/campd_az/emissions-hourly-$y-$st.csv"
+    [ -f "$f" ] || curl -sSf -o "$f" "https://api.epa.gov/easey/bulk-files/emissions/hourly/state/emissions-hourly-$y-$st.csv"
+  done
+done
+
 echo "static downloads complete"

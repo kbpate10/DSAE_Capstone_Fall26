@@ -1,0 +1,17 @@
+variant,ba,year,days,save_decide_est_eval_est,save_decide_alt_eval_alt,save_decide_est_eval_alt,gap_a_minus_e_pts,kept_share_est_decision_on_alt,rule_a_within_3pts,rule_b_keeps_90pct,robust
+as_specified,AZPS,2024,362,15.771,11.519,11.34,-4.252,0.984,False,True,False
+as_specified,AZPS,2025,352,25.645,11.759,12.096,-13.885,1.029,False,True,False
+as_specified,SRP,2024,360,17.672,16.882,16.13,-0.79,0.955,True,True,True
+as_specified,SRP,2025,364,18.224,18.407,17.657,0.183,0.959,True,True,True
+as_specified,TEPC,2024,356,8.175,7.159,2.165,-1.016,0.302,True,False,False
+as_specified,TEPC,2025,364,11.855,5.279,4.903,-6.576,0.929,False,True,False
+as_specified,WALC,2024,340,11.51,9.939,9.773,-1.571,0.983,True,True,True
+as_specified,WALC,2025,364,13.759,11.741,11.197,-2.018,0.954,True,True,True
+band,AZPS,2024,359,15.763,11.53,11.34,-4.234,0.984,False,True,False
+band,AZPS,2025,325,25.302,23.069,23.281,-2.233,1.009,True,True,True
+band,SRP,2024,360,17.672,16.882,16.13,-0.79,0.955,True,True,True
+band,SRP,2025,355,17.72,17.95,17.185,0.23,0.957,True,True,True
+band,TEPC,2024,344,8.035,7.163,2.41,-0.872,0.336,True,False,False
+band,TEPC,2025,336,11.676,5.077,5.057,-6.599,0.996,False,True,False
+band,WALC,2024,322,11.65,10.083,9.884,-1.567,0.98,True,True,True
+band,WALC,2025,308,14.083,12.016,11.862,-2.067,0.987,True,True,True
