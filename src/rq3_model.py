@@ -62,6 +62,9 @@ def build() -> pd.DataFrame:
         cnt = p.groupby("key")[c].transform("count")
         p.loc[(dev.abs() > 2.5) & (cnt >= 4), c] = np.nan
         p[c] = winsor(p[c])
+    # keep the unclipped exposure for the extremes check in rq3_power.py (the model columns below are winsorised)
+    p["d_ln_ci_pc_raw"] = p.d_ln_ci_pc
+    p["d_ln_ci_pc_raw_l1"] = p.d_ln_ci_pc_l1
     for c in ["d_ln_ci_pc", "d_ln_ci_pc_l1", "d_ln_cust"]:
         p[c] = winsor(p[c])
     p["surge"] = (p.d_ln_ci_pc > 0.10).astype(float).where(p.d_ln_ci_pc.notna())

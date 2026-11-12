@@ -1,0 +1,5 @@
+variant,n,elasticity,se,effect_pct_per_10pct_load,lo,hi,mde80_pct
+winsorised 1/99 (main spec),9245,0.069,0.096,0.657,-1.133,2.446,2.558
+unclipped,9245,0.061,0.069,0.577,-0.705,1.858,1.832
+clipped at 99.9th pct,9245,0.064,0.077,0.608,-0.837,2.054,2.066
+extremes dropped (|growth| > 0.5),9209,0.067,0.095,0.635,-1.134,2.403,2.528

@@ -1,0 +1,7 @@
+design,n,utilities,estimate_pct,se_pct,mde80_pct,unit,treated_utility_years,treated_utilities
+"continuous exposure, all utilities",9245,1080.0,0.66,0.91,2.56,% SAIDI per +10% C&I load,,
+"continuous exposure, Arizona only",105,14.0,13.1,10.05,28.16,% SAIDI per +10% C&I load,,
+"continuous exposure, all utilities, unclipped",9245,,0.58,0.65,1.83,% SAIDI per +10% C&I load,,
+"surge indicator, growth > 10%",9245,1080.0,0.11,2.67,7.75,% SAIDI in a surge year,527.0,295.0
+"surge indicator, growth > 25%",9245,1080.0,-0.98,5.6,16.99,% SAIDI in a surge year,115.0,95.0
+"surge indicator, growth > 50%",9245,1080.0,-1.05,7.94,24.9,% SAIDI in a surge year,26.0,24.0

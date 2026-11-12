@@ -1,0 +1,21 @@
+model,outcome,term,coef,se,lo,hi,p,F_like,n,utilities,dc_utilities
+"FS first stage: post2019, any data center",d_ln_ci_pc,any_post,0.0048,0.0028,-0.0008,0.0103,0.094,2.8054,10516,1172,236
+"FS first stage (unclipped growth): post2019, any data center",d_ln_ci_pc_raw,any_post,0.0056,0.0035,-0.0013,0.0125,0.1091,2.568,10516,1172,236
+"RF reduced form: post2019, any data center",ln_saidi_nomed,any_post,-0.0413,0.0307,-0.1015,0.0189,0.1787,1.8083,9245,1080,224
+"FS first stage: post2019, log1p per 100k customers",d_ln_ci_pc,ln_dc_post,0.0014,0.0012,-0.0009,0.0037,0.2401,1.3804,10516,1172,236
+"FS first stage (unclipped growth): post2019, log1p per 100k customers",d_ln_ci_pc_raw,ln_dc_post,0.0021,0.0015,-0.001,0.0051,0.184,1.7652,10516,1172,236
+"RF reduced form: post2019, log1p per 100k customers",ln_saidi_nomed,ln_dc_post,-0.0299,0.0139,-0.0571,-0.0026,0.0316,4.621,9245,1080,224
+"FS first stage: post2018, any data center",d_ln_ci_pc,any_post2018,0.0053,0.0031,-0.0008,0.0115,0.0866,2.9372,10516,1172,236
+"FS first stage (unclipped growth): post2018, any data center",d_ln_ci_pc_raw,any_post2018,0.006,0.0037,-0.0012,0.0133,0.1038,2.6463,10516,1172,236
+"RF reduced form: post2018, any data center",ln_saidi_nomed,any_post2018,-0.0419,0.0326,-0.1059,0.022,0.1986,1.6526,9245,1080,224
+"FS first stage: post2020, any data center",d_ln_ci_pc,any_post2020,0.003,0.0031,-0.0031,0.0091,0.3348,0.9303,10516,1172,236
+"FS first stage (unclipped growth): post2020, any data center",d_ln_ci_pc_raw,any_post2020,0.0044,0.004,-0.0035,0.0122,0.2739,1.1975,10516,1172,236
+"RF reduced form: post2020, any data center",ln_saidi_nomed,any_post2020,-0.055,0.0298,-0.1134,0.0033,0.0647,3.4136,9245,1080,224
+"FS first stage: linear trend since 2018, any data center",d_ln_ci_pc,any_trend,0.0012,0.0008,-0.0003,0.0027,0.1096,2.5603,10516,1172,236
+"FS first stage (unclipped growth): linear trend since 2018, any data center",d_ln_ci_pc_raw,any_trend,0.0014,0.001,-0.0006,0.0033,0.1661,1.9185,10516,1172,236
+"RF reduced form: linear trend since 2018, any data center",ln_saidi_nomed,any_trend,-0.0136,0.0071,-0.0275,0.0003,0.0554,3.6718,9245,1080,224
+"FS first stage + size x post: post2019, any data center",d_ln_ci_pc,any_post,0.0022,0.0033,-0.0042,0.0087,0.5018,0.4512,10516,1172,236
+"RF reduced form + size x post: post2019, any data center",ln_saidi_nomed,any_post,-0.0344,0.0378,-0.1084,0.0396,0.3624,0.8298,9245,1080,224
+"RF reduced form + size x post: post2019, log1p per 100k customers",ln_saidi_nomed,ln_dc_post,-0.029,0.0141,-0.0566,-0.0014,0.0398,4.2282,9245,1080,224
+HET load growth x data-center utility,ln_saidi_nomed,dc_x_growth,0.2576,0.2187,-0.1711,0.6863,0.239,1.3867,9245,1080,224
+"HET load growth (main term, same model)",ln_saidi_nomed,d_ln_ci_pc,0.0291,0.1,-0.1668,0.225,0.771,0.0847,9245,1080,224

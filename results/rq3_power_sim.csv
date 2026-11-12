@@ -1,0 +1,5 @@
+true_elasticity,true_effect_pct_per_10pct_load,reps,simulated_power,analytic_power
+0.05,0.477,120,0.067,0.082
+0.1,0.953,120,0.208,0.181
+0.2,1.906,120,0.508,0.551
+0.3,2.859,120,0.867,0.879
