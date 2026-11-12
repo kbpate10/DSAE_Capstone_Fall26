@@ -1,0 +1,51 @@
+case,scope,carbonOnly_carbon,carbonOnly_water,balanced_carbon,balanced_water,waterOnly_carbon,waterOnly_water,within_day_corr_C_W
+"literature | nuclear x1, hydro 0",pooled,17.729,-0.104,14.286,3.685,2.661,6.765,0.078
+"literature | nuclear x1, hydro 0",AZPS,25.614,4.173,24.88,4.43,9.492,5.216,0.283
+"literature | nuclear x1, hydro 0",SRP,18.224,-5.283,8.129,0.378,-8.408,4.875,-0.642
+"literature | nuclear x1, hydro 0",TEPC,11.855,-2.531,8.253,1.27,-0.613,5.698,0.278
+"literature | nuclear x1, hydro 0",WALC,13.759,8.623,12.442,13.931,8.152,15.423,0.395
+"literature | nuclear x0, hydro 0",pooled,17.729,0.616,13.904,5.274,3.116,8.111,0.181
+"literature | nuclear x0, hydro 0",AZPS,25.614,4.173,24.657,4.478,9.492,5.216,0.283
+"literature | nuclear x0, hydro 0",SRP,18.224,-7.316,8.311,3.211,-5.774,9.278,-0.232
+"literature | nuclear x0, hydro 0",TEPC,11.855,-2.531,7.429,1.863,-0.613,5.698,0.278
+"literature | nuclear x0, hydro 0",WALC,13.759,8.623,12.097,14.315,8.152,15.423,0.395
+"literature | nuclear x1, hydro 17",pooled,17.729,-10.49,12.7,11.309,-0.281,13.747,-0.151
+"literature | nuclear x1, hydro 17",AZPS,25.614,4.173,25.249,4.325,9.492,5.216,0.283
+"literature | nuclear x1, hydro 17",SRP,18.224,-3.956,15.78,-2.129,-7.178,4.749,-0.503
+"literature | nuclear x1, hydro 17",TEPC,11.855,-2.531,10.241,-0.605,-0.613,5.698,0.278
+"literature | nuclear x1, hydro 17",WALC,13.759,-17.813,-12.192,20.009,-12.708,20.484,-0.663
+"measured M1 | nuclear x1, hydro 0",pooled,17.729,-0.682,14.697,2.522,-0.814,6.385,-0.087
+"measured M1 | nuclear x1, hydro 0",AZPS,25.614,-1.53,24.149,-0.494,-2.901,5.127,-0.185
+"measured M1 | nuclear x1, hydro 0",SRP,18.224,-4.251,9.752,0.021,-7.972,4.106,-0.623
+"measured M1 | nuclear x1, hydro 0",TEPC,11.855,-2.05,9.17,1.279,0.041,5.242,-0.094
+"measured M1 | nuclear x1, hydro 0",WALC,13.759,9.519,12.756,13.46,9.881,14.249,0.553
+"measured M1 | nuclear x0, hydro 0",pooled,17.729,-0.069,14.215,4.029,-0.248,7.714,0.036
+"measured M1 | nuclear x0, hydro 0",AZPS,25.614,-1.53,23.547,-0.186,-2.901,5.127,-0.185
+"measured M1 | nuclear x0, hydro 0",SRP,18.224,-5.219,9.625,3.008,-4.692,7.877,-0.129
+"measured M1 | nuclear x0, hydro 0",TEPC,11.855,-2.05,8.543,1.882,0.041,5.242,-0.094
+"measured M1 | nuclear x0, hydro 0",WALC,13.759,9.519,12.466,13.651,9.881,14.249,0.553
+"measured M1 | nuclear x1, hydro 17",pooled,17.729,-10.532,12.925,10.15,-3.945,12.95,-0.351
+"measured M1 | nuclear x1, hydro 17",AZPS,25.614,-1.53,25.011,-1.134,-2.901,5.127,-0.185
+"measured M1 | nuclear x1, hydro 17",SRP,18.224,-3.035,16.255,-1.654,-6.46,3.972,-0.474
+"measured M1 | nuclear x1, hydro 17",TEPC,11.855,-2.05,10.832,-0.617,0.041,5.242,-0.094
+"measured M1 | nuclear x1, hydro 17",WALC,13.759,-16.911,-12.096,19.003,-12.552,19.41,-0.65
+"measured M2 | nuclear x1, hydro 0",pooled,17.729,-0.228,14.917,2.745,0.089,6.219,-0.063
+"measured M2 | nuclear x1, hydro 0",AZPS,25.614,-0.039,24.576,0.519,-0.334,4.578,-0.109
+"measured M2 | nuclear x1, hydro 0",SRP,18.224,-4.247,9.877,-0.026,-7.972,4.103,-0.623
+"measured M2 | nuclear x1, hydro 0",TEPC,11.855,-1.888,9.318,1.273,0.158,5.173,-0.088
+"measured M2 | nuclear x1, hydro 0",WALC,13.759,9.599,12.804,13.365,10.05,14.15,0.568
+"measured M2 | nuclear x0, hydro 0",pooled,17.729,0.475,14.526,4.25,0.655,7.483,0.061
+"measured M2 | nuclear x0, hydro 0",AZPS,25.614,-0.039,24.172,0.732,-0.334,4.578,-0.109
+"measured M2 | nuclear x0, hydro 0",SRP,18.224,-5.21,9.867,2.897,-4.692,7.871,-0.129
+"measured M2 | nuclear x0, hydro 0",TEPC,11.855,-1.888,8.692,1.86,0.158,5.173,-0.088
+"measured M2 | nuclear x0, hydro 0",WALC,13.759,9.599,12.549,13.603,10.05,14.15,0.568
+"measured M2 | nuclear x1, hydro 17",pooled,17.729,-10.199,12.994,10.184,-3.065,12.746,-0.33
+"measured M2 | nuclear x1, hydro 17",AZPS,25.614,-0.039,25.113,0.227,-0.334,4.578,-0.109
+"measured M2 | nuclear x1, hydro 17",SRP,18.224,-3.03,16.3,-1.676,-6.459,3.971,-0.474
+"measured M2 | nuclear x1, hydro 17",TEPC,11.855,-1.888,10.886,-0.541,0.158,5.173,-0.088
+"measured M2 | nuclear x1, hydro 17",WALC,13.759,-16.814,-12.038,18.848,-12.539,19.279,-0.649
+"M1, CSP counted as PV | nuclear x1, hydro 0",pooled,17.729,0.81,14.925,3.879,3.348,6.574,0.005
+"M1, CSP counted as PV | nuclear x1, hydro 0",AZPS,25.614,4.636,24.887,4.955,9.864,5.849,0.183
+"M1, CSP counted as PV | nuclear x1, hydro 0",SRP,18.224,-4.251,9.691,0.041,-7.972,4.106,-0.623
+"M1, CSP counted as PV | nuclear x1, hydro 0",TEPC,11.855,-2.05,9.166,1.283,0.041,5.242,-0.094
+"M1, CSP counted as PV | nuclear x1, hydro 0",WALC,13.759,9.519,12.754,13.473,9.881,14.249,0.553

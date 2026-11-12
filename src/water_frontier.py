@@ -36,13 +36,27 @@ ALPHAS = np.round(np.linspace(0, 1, 11), 2)
 KS = [4, 8, 12]
 
 
+def _factor(raw: pd.DataFrame, wf) -> pd.Series:
+    """Per-row consumption factor (L/kWh): a {fuel: factor} dict (one value per fuel for every BA), or a table with columns
+    respondent, fueltype, month (0 = all months, 1-12 = local month), wf (BA-specific, e.g. water_factors_measured.parquet).
+    Rows with no entry in the table fall back to the literature factor WF."""
+    if isinstance(wf, dict):
+        return raw.fueltype.map(wf)
+    key = raw[["respondent", "fueltype"]].assign(month=(raw.ts - pd.Timedelta(hours=7)).dt.month)
+    ann = wf[wf.month == 0][["respondent", "fueltype", "wf"]]
+    mon = wf[wf.month > 0][["respondent", "fueltype", "month", "wf"]]
+    a = key.merge(ann, on=["respondent", "fueltype"], how="left").wf.to_numpy()
+    m = key.merge(mon, on=["respondent", "fueltype", "month"], how="left").wf.to_numpy()
+    return pd.Series(np.where(np.isnan(m), a, m), index=raw.index).fillna(raw.fueltype.map(WF))
+
+
 def build(wf=WF, wuemax=WUE_MAX) -> pd.DataFrame:
     ci = pd.read_parquet(ROOT / "data/processed/carbon_intensity.parquet")
     raw = pd.concat(pd.read_parquet(f) for f in glob.glob(str(ROOT / "data/raw/eia930/*.parquet")))
-    raw = raw[raw.fueltype.isin(wf)].copy()
+    raw = raw[raw.fueltype.isin(wf if isinstance(wf, dict) else set(wf.fueltype))].copy()
     raw["ts"] = pd.to_datetime(raw.period, format="%Y-%m-%dT%H")
     raw["gen"] = raw.value.clip(lower=0)
-    raw["w"] = raw.gen * raw.fueltype.map(wf)
+    raw["w"] = raw.gen * _factor(raw, wf)
     mix = raw.groupby(["respondent", "ts"]).agg(w=("w", "sum"), g=("gen", "sum")).reset_index()
     mix["w_off_per_kwh_grid"] = mix.w / mix.g.where(mix.g > 0)
     d = ci.merge(mix[["respondent", "ts", "w_off_per_kwh_grid"]], on=["respondent", "ts"], how="left")

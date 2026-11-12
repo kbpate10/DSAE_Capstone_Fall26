@@ -1,0 +1,41 @@
+case,ba,W_off_L_per_kWh,W_on_L_per_kWh,W_total,C_kg_per_kWh,within_day_corr_C_W,within_day_corr_C_Woff
+"literature | nuclear x1, hydro 0",AZPS,1.5555,0.962,2.5175,0.6105,0.2834,0.9931
+"literature | nuclear x1, hydro 0",SRP,2.1902,0.9624,3.1526,0.2598,-0.6422,-0.378
+"literature | nuclear x1, hydro 0",TEPC,1.4917,0.8659,2.3576,0.6231,0.2778,0.991
+"literature | nuclear x1, hydro 0",WALC,0.4109,0.8891,1.2999,0.2266,0.3945,0.9959
+"literature | nuclear x0, hydro 0",AZPS,1.5555,0.962,2.5175,0.6105,0.2834,0.9931
+"literature | nuclear x0, hydro 0",SRP,0.5102,0.9624,1.4725,0.2598,-0.2322,0.9904
+"literature | nuclear x0, hydro 0",TEPC,1.4917,0.8659,2.3576,0.6231,0.2778,0.991
+"literature | nuclear x0, hydro 0",WALC,0.4109,0.8891,1.2999,0.2266,0.3945,0.9959
+"literature | nuclear x1, hydro 17",AZPS,1.5555,0.962,2.5175,0.6105,0.2834,0.9931
+"literature | nuclear x1, hydro 17",SRP,2.2898,0.9624,3.2521,0.2598,-0.5034,-0.0708
+"literature | nuclear x1, hydro 17",TEPC,1.4917,0.8659,2.3576,0.6231,0.2778,0.991
+"literature | nuclear x1, hydro 17",WALC,8.6674,0.8891,9.5565,0.2266,-0.6633,-0.6486
+"measured M1 | nuclear x1, hydro 0",AZPS,1.5135,0.962,2.4755,0.6105,-0.185,0.9387
+"measured M1 | nuclear x1, hydro 0",SRP,2.4378,0.9624,3.4002,0.2598,-0.623,-0.2571
+"measured M1 | nuclear x1, hydro 0",TEPC,1.0867,0.8659,1.9526,0.6231,-0.0942,0.8038
+"measured M1 | nuclear x1, hydro 0",WALC,0.691,0.8891,1.5801,0.2266,0.5528,0.9985
+"measured M1 | nuclear x0, hydro 0",AZPS,1.5135,0.962,2.4755,0.6105,-0.185,0.9387
+"measured M1 | nuclear x0, hydro 0",SRP,0.6192,0.9624,1.5816,0.2598,-0.1293,0.9871
+"measured M1 | nuclear x0, hydro 0",TEPC,1.0867,0.8659,1.9526,0.6231,-0.0942,0.8038
+"measured M1 | nuclear x0, hydro 0",WALC,0.691,0.8891,1.5801,0.2266,0.5528,0.9985
+"measured M1 | nuclear x1, hydro 17",AZPS,1.5135,0.962,2.4755,0.6105,-0.185,0.9387
+"measured M1 | nuclear x1, hydro 17",SRP,2.5374,0.9624,3.4997,0.2598,-0.474,0.0417
+"measured M1 | nuclear x1, hydro 17",TEPC,1.0867,0.8659,1.9526,0.6231,-0.0942,0.8038
+"measured M1 | nuclear x1, hydro 17",WALC,8.9475,0.8891,9.8366,0.2266,-0.6502,-0.6355
+"measured M2 | nuclear x1, hydro 0",AZPS,1.6452,0.962,2.6071,0.6105,-0.1087,0.9517
+"measured M2 | nuclear x1, hydro 0",SRP,2.4384,0.9624,3.4008,0.2598,-0.6228,-0.2562
+"measured M2 | nuclear x1, hydro 0",TEPC,1.1006,0.8659,1.9665,0.6231,-0.0877,0.7969
+"measured M2 | nuclear x1, hydro 0",WALC,0.722,0.8891,1.6111,0.2266,0.5675,0.9987
+"measured M2 | nuclear x0, hydro 0",AZPS,1.6452,0.962,2.6071,0.6105,-0.1087,0.9517
+"measured M2 | nuclear x0, hydro 0",SRP,0.6198,0.9624,1.5822,0.2598,-0.1288,0.9871
+"measured M2 | nuclear x0, hydro 0",TEPC,1.1006,0.8659,1.9665,0.6231,-0.0877,0.7969
+"measured M2 | nuclear x0, hydro 0",WALC,0.722,0.8891,1.6111,0.2266,0.5675,0.9987
+"measured M2 | nuclear x1, hydro 17",AZPS,1.6452,0.962,2.6071,0.6105,-0.1087,0.9517
+"measured M2 | nuclear x1, hydro 17",SRP,2.538,0.9624,3.5003,0.2598,-0.4737,0.0425
+"measured M2 | nuclear x1, hydro 17",TEPC,1.1006,0.8659,1.9665,0.6231,-0.0877,0.7969
+"measured M2 | nuclear x1, hydro 17",WALC,8.9785,0.8891,9.8676,0.2266,-0.6487,-0.6341
+"M1, CSP counted as PV | nuclear x1, hydro 0",AZPS,1.4396,0.962,2.4016,0.6105,0.1835,0.9543
+"M1, CSP counted as PV | nuclear x1, hydro 0",SRP,2.4378,0.9624,3.4002,0.2598,-0.623,-0.2571
+"M1, CSP counted as PV | nuclear x1, hydro 0",TEPC,1.0867,0.8659,1.9526,0.6231,-0.0942,0.8038
+"M1, CSP counted as PV | nuclear x1, hydro 0",WALC,0.691,0.8891,1.5801,0.2266,0.5528,0.9985
