@@ -9,6 +9,11 @@ Choices (documented so the report can state them):
   * Remaining negative values (e.g. solar auxiliary load at night) are clipped to 0.
   * eGRID biogenic CO2 is not counted (PLCO2AN is combustion CO2 excluding biogenic).
   * Hours with a missing fuel value or zero total generation get ci = NaN and a flag.
+  * Implausible fuel values (added 2026-11-10; docs/MEASURED_EMISSIONS.md): a value above PLAUSIBLE_MULT (3) times the 99th percentile of that BA's positive values for that
+    fuel is set to missing, which flags the hour (nothing is imputed). Reason: EIA-930 fuel series contain isolated spikes (SRP natural gas up to 69,905 MWh against a 99th
+    percentile of 4,519; WALC hydro 94,562 against 1,364) that distorted hourly intensity. The multiplier was fixed from the count of flagged hours per BA and fuel (about 100
+    hours over the four BAs; the largest value kept is 6,075 MWh on SRP gas), before any forecast, scheduling or marginal result was recomputed. Snapshot of outputs before the
+    change: results/_audit_before/before_fuel_qc_2026-11-10/.
 
 Output: data/processed/carbon_intensity.parquet (one row per BA-hour)
 """
@@ -26,6 +31,7 @@ FUEL_MAP = {"COL": "COAL", "NG": "GAS", "NUC": "NUCLEAR", "OIL": "OIL",
             "SUN": "SOLAR", "WND": "WIND", "WAT": "HYDRO", "OTH": "OTHF"}
 EXCLUDE = {"BAT", "UES", "SNB"}
 BAS = ["AZPS", "SRP", "TEPC", "WALC"]
+PLAUSIBLE_MULT = 3.0
 
 
 def emission_factors() -> pd.DataFrame:
@@ -64,6 +70,11 @@ def main() -> None:
     df = pd.concat(pd.read_parquet(f) for f in glob.glob(str(ROOT / "data/raw/eia930/*.parquet")))
     df = df[~df["fueltype"].isin(EXCLUDE)][["period", "respondent", "fueltype", "value"]]
     df["value"] = df["value"].clip(lower=0)
+    q99 = df["value"].where(df["value"] > 0).groupby([df["respondent"], df["fueltype"]]).transform(lambda v: v.quantile(0.99))
+    spike = df["value"] > PLAUSIBLE_MULT * q99
+    print("implausible fuel values set to missing:", int(spike.sum()),
+          df[spike].groupby(["respondent", "fueltype"]).size().to_dict())
+    df.loc[spike, "value"] = np.nan
     df = df.merge(ef, on=["respondent", "fueltype"], how="left")
     df["co2"] = df["value"] * df["ef"]
 
