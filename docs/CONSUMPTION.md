@@ -34,7 +34,7 @@ DEAA, HGMA, PACE, IID, CISO (the sources of nearly all imports; NEVP and LDWP ar
 
 1. **The ranking changes.** Production-based: WALC < SRP << AZPS ~ TEPC. Consumption-based: SRP < WALC < AZPS < TEPC.
    AZPS is 28% cleaner than its production figure because most of what it receives comes from SRP; WALC is 67% dirtier because it
-   imports from AZPS and from the higher-intensity WACM, GRID and GRIF. Since the caveat in CLAUDE.md that "SRP looks clean mainly
+   imports from AZPS and from the higher-intensity WACM, GRID and GRIF. Since the caveat in the project notes that "SRP looks clean mainly
    because Palo Verde is reported there" is about the BA's own generation, consumption accounting is the check on it: SRP stays the cleanest of the
    four (250), though 16% above its production figure.
 2. **The hourly shape is mostly preserved except for WALC.** Within-day correlation between the two signals is 0.84-0.97 for

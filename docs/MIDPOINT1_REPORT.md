@@ -1,5 +1,7 @@
 # Midpoint 1: Carbon, Water, and Reliability for Arizona's AI Data Centers
 
+> **Update 2026-11-10:** the forecast table in section 3 was recomputed after a plausibility cap on EIA-930 fuel values (105 BA-hours flagged; `docs/MARGINAL.md`, second correction). Earlier values: LightGBM gain at 1 h 26.0 / 20.6 / 25.4 / 12.7% and at 24 h -0.2 / 3.9 / 2.1 / 4.0% (AZPS / SRP / TEPC / WALC); neural net 32.0 / 27.1 / 25.0 / 14.8% and -4.2 / 4.5 / 5.4 / 4.1%. The ranges now read 14-26% at 1 hour and 2-5% at 24 hours for LightGBM (neural net up to 6%), still none on AZPS; the neural net is single-seed, so its changes are within seed noise. Scheduling savings (24.3-27.5% pooled) moved by 0.1 points or less.
+
 FSE 570 Data Science Capstone, Fall 2026. Status report with results to date, deviations from the
 proposal, and known limitations.
 
@@ -13,7 +15,7 @@ baseline.
 | Requirement | Status | Evidence |
 |---|---|---|
 | Data pipeline and data-sources rubric | Met | 8 sources, 5 data structures, 1.06M fuel-hour records (175,208 BA-hours), 12k-row utility panel, 46k wells ([data dictionary](data_dictionary.md)) |
-| Forecaster beats persistence | Met | LightGBM: 13-26% lower MAE at 1 hour on all four BAs (neural net up to 15-32%); 2-4% at 24 hours on three of four, none on AZPS (Section 3) |
+| Forecaster beats persistence | Met | LightGBM: 14-26% lower MAE at 1 hour on all four BAs (neural net up to 15-32%); 2-5% at 24 hours on three of four, none on AZPS (Section 3) |
 | Four technique families | Met | LightGBM, fixed-effects regression, PyMC hierarchical model, temporal CNN |
 | Baseline for every arm | Met | RQ1 forecast + scheduler, RQ2 siting score, RQ3 regression + Bayesian model |
 
@@ -64,16 +66,16 @@ holds. LightGBM is treated as the primary model; the neural net was added afterw
 
 | MAE (kg CO2/MWh) | Horizon | Persistence | LightGBM | Neural net | LightGBM gain | Neural net gain |
 |---|---|---|---|---|---|---|
-| AZPS | 1 h | 24.2 | 17.9 | 16.5 | +26.0% | +32.0% |
-| SRP | 1 h | 10.5 | 8.4 | 7.7 | +20.6% | +27.1% |
-| TEPC | 1 h | 16.1 | 12.0 | 12.1 | +25.4% | +25.0% |
-| WALC | 1 h | 15.9 | 13.9 | 13.6 | +12.7% | +14.8% |
-| AZPS | 24 h | 40.6 | 40.7 | 42.3 | **-0.2%** | **-4.2%** |
-| SRP | 24 h | 21.3 | 20.4 | 20.3 | +3.9% | +4.5% |
-| TEPC | 24 h | 39.5 | 38.7 | 37.4 | +2.1% | +5.4% |
-| WALC | 24 h | 28.8 | 27.6 | 27.6 | +4.0% | +4.1% |
+| AZPS | 1 h | 24.1 | 17.9 | 16.5 | +26.0% | +31.7% |
+| SRP | 1 h | 10.5 | 8.1 | 7.5 | +23.1% | +28.5% |
+| TEPC | 1 h | 16.1 | 12.1 | 11.9 | +25.1% | +26.0% |
+| WALC | 1 h | 15.9 | 13.8 | 13.6 | +13.6% | +14.6% |
+| AZPS | 24 h | 40.5 | 41.0 | 43.1 | **-1.2%** | **-6.2%** |
+| SRP | 24 h | 21.3 | 20.6 | 20.3 | +3.3% | +4.7% |
+| TEPC | 24 h | 39.5 | 38.8 | 37.2 | +2.0% | +5.9% |
+| WALC | 24 h | 28.8 | 27.4 | 26.9 | +4.7% | +6.4% |
 
-Reading: strong gains at 1 hour; at 24 hours the gain is small (2-4% for LightGBM) and AZPS shows none. Day-ahead demand
+Reading: strong gains at 1 hour; at 24 hours the gain is small (2-5% for LightGBM) and AZPS shows none. Day-ahead demand
 forecasts added about 1% on two BAs and hurt on AZPS. The neural net used one seed and a 96-hour window
 (compute-limited, CPU only), so differences near 1 kg/MWh are within seed noise.
 
@@ -229,7 +231,7 @@ consumption by fuel (see the [data dictionary](data_dictionary.md); factors are 
 | Proposal | What happened | Why |
 |---|---|---|
 | LBNL queue measures large-load growth | Not available; C&I sales growth used instead | LBNL has generation requests only |
-| Day-ahead forecasts beat persistence by a clear margin | 2-4% (LightGBM) and up to 5% (neural net) on three BAs, none on AZPS | Arizona's daily solar cycle is highly repeatable |
+| Day-ahead forecasts beat persistence by a clear margin | 2-5% (LightGBM) and up to 6% (neural net) on three BAs, none on AZPS | Arizona's daily solar cycle is highly repeatable |
 | Interconnection wait time as grid strain | County-level active generator-queue MW | No wait times or load queue available |
 | Regulatory-exposure score from ACC filings | Not built | Scoped out as a supporting signal |
 | ADWR Wells55 registry | GWSI well sites and a USGS-hosted subset | Scriptable access; Wells55 not pulled |

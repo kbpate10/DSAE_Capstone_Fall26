@@ -29,12 +29,15 @@ Unified analysis tables built by `src/build_master.py`: `master_ba_hour.parquet`
 | `carbon_intensity.parquet` | BA x hour (UTC) | 174,740 | `ci_kg_per_mwh`, `clean_share`, `gen_mwh`, `data_flag` |
 | `emission_factors.csv` | BA x fuel | 32 | `ef` (kg CO2/MWh), `ef_source` (ba / az / us fallback) |
 | `eia861_panel.parquet` | utility x state x year | 24,308 | SAIDI/SAIFI with and without major events, customers, C&I MWh, `_merge` |
-| `rq3_panel.parquet` | utility x state x year | 11,845 | cleaned outcomes (`ln_saidi_nomed`, ...), `d_ln_ci_pc` (exposure), controls |
+| `rq3_panel.parquet` | utility x state x year | 11,845 | cleaned outcomes (`ln_saidi_nomed`, ...), `d_ln_ci_pc` (exposure, winsorised 1/99), `d_ln_ci_pc_raw` (unclipped), controls |
 | `lbnl_queue_all.parquet` | project | 38,201 | `state`, `county`, `q_status`, `mw_1`, `type_clean` |
 | `sites_az.parquet` / `sites_scored.parquet` | 0.25-degree cell | 192 | `gw_depth_med`, `gw_trend`, `ghi_kwh`, `wetbulb_summer_c`, `q_active_mw`, `score`, `rank` |
 
 ## Cleaning rules and known gaps
 
+- **EIA-930 demand (D) and net interchange glitches.** Demand contains non-positive and absurd values (SRP 70,313 MWh vs a median of 3,407; WALC -50,457 to +94,444; PJM has a 32-bit sentinel 2,147,483,647 and a value of 431 million).
+  Before any regression on demand changes, demand (and net generation) is set to missing when not positive or above 5 times the BA's median demand, and net interchange when its magnitude exceeds 5 times the median demand
+  (`marginal_emissions.load`, `interchange_analysis.mask_ne`, `ba_stability_scan.hourly`). 53 hours across the four Arizona BAs fail the rule. The carbon-intensity series use fuel mix, not demand, and are not affected.
 **EIA-930**
 - Gaps are flagged, not interpolated: TEPC 2021 has 8,388 of 8,760 hours; AZPS 2025 has 8,664.
 - 1,351 null values; 50,086 negative values (battery charging, solar auxiliary load at night).
@@ -104,6 +107,31 @@ Unified analysis tables built by `src/build_master.py`: `master_ba_hour.parquet`
 - eGRID `PLCO2AN` is in short tons (verified); "other" fuel uses the national eGRID "other fossil" factor
   (under 0.4% of intensity).
 - See [AUDIT.md](AUDIT.md) for the full list.
+
+## Interchange inputs
+- `data/raw/eia930_interchange/{BA}_{year}.parquet` (`src/pull_interchange.py`, EIA API v2 `rto/interchange-data`): hourly flow in MWh from
+  `fromba` to `toba`, positive = out of `fromba`. 1,304,192 rows, 2021-01-01 to 2025-12-31, 16 counterparties, no missing values.
+  Net export of a BA-hour = sum over counterparties. Not carbon-weighted: the fuel mix of the exporting BAs is not in the project.
+  Checks (`results/interchange_checks.csv`): generation - demand - net export has median residual 0 (AZPS, TEPC), 2 MWh (WALC), 19 MWh (SRP);
+  the 95th percentile is 376-824 MWh. Arizona pair flows are antisymmetric to within 0-4% except AZPS-SRP (median 145 of 3,375 MWh).
+
+- `data/raw/eia930_neighbors/{BA}_{year}.parquet` (`src/pull_neighbor_fuel.py`): hourly fuel-type generation for PNM, WACM, EPE, GRIF, GRID,
+  DEAA, HGMA, PACE, IID, CISO, 2021-2025 (48 files; GRIF has 24,824 hours). Share of hours with a usable intensity: HGMA 41%,
+  DEAA 82%, GRIF 89%, IID 99%, the rest about 100%.
+- `data/processed/consumption_ci.parquet` (`src/consumption_carbon.py`): per Arizona BA-hour production-based and flow-traced consumption-based
+  intensity, gross imports, supply, import coverage and a validity flag (see `docs/CONSUMPTION.md`).
+
+- `data/raw/osm_dc_us/{state}.json`, `data/raw/osm_dc_us.parquet` (`src/pull_osm_datacenters_us.py`): OpenStreetMap features tagged `telecom=data_center` or `building=data_center`, all 51 states, 1,841
+  features (66% with an operator tag; no opening dates). `data/raw/territories_us.geojson` (`src/pull_territories_us.py`): 2,949 national HIFLD retail territories, geometry simplified to about 100 m.
+  `data/processed/dc_by_utility.parquet`: mapped data centers per panel utility (`n_dc`, `dc_per100k`, `any_dc`, `ln_dc`); 1,806 features assigned to 207 of 1,188 utilities
+  (`docs/RQ3_DC_EXPOSURE.md`).
+
+- `data/raw/eia860/` (EIA-860, 2025 data year) and `data/raw/eia923/` (EIA-923 Page 1 generation and Schedule 8D cooling water, 2025), downloaded by `src/download_static.sh`.
+  `data/processed/water_factors_measured.parquet` (`src/build_water_factors.py`): BA x fuel generation-side consumption factors in L/kWh (versions M1/M2; solar by month),
+  from 21 reporting Arizona-BA plants; see `docs/WATER_MEASURED.md` for coverage and the EIA-923 vs EIA-930 generation cross-check.
+
+- `data/raw/ba_panel/{fuel,region}/{BA}_{year}.parquet` (`src/pull_ba_panel.py`): hourly fuel-type generation and region data (demand D, net generation NG, total interchange TI) for 37 BAs, 2021-2025, for the multi-BA scan
+  (`docs/MEF_SCAN_PREREG.md`). Net interchange only (not pairwise).
 
 ## Stage 1 inputs
 - `data/raw/rq2/territories_az.geojson`: HIFLD electric retail service territories intersecting Arizona (61 polygons;

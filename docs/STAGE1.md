@@ -67,6 +67,6 @@ Default scenario (500 MW, K = 5, tau_R = 100, A_max = 25%):
   natural next constraint but no budget data is in the project.
 
 ## Next
-- Plant-level and interconnection capacity constraints (the real limit on a 500 MW load).
+- Interconnection: a voltage-and-proximity screen is built (`docs/STAGE1_INTERCONNECTION.md`); real plant-level and node capacity constraints are still missing (no public headroom data).
 - Replace the constructed score with a model fitted to real data-center locations.
-- Connect to Stage 2 so the chosen sites feed the scheduler's per-site carbon and water forecasts.
+- Stage 2 coupling: first version in `docs/STAGE2.md`.

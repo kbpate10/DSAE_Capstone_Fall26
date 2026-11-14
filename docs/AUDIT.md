@@ -15,6 +15,8 @@ was to find places where something was assumed rather than shown. Checks are rep
 | 5 | Headline forecast gains (15-32% at 1 hour, 4-5% at 24 hours) were the neural net's, which was the better model on the test year and is a single seed | LightGBM-only: 13-26% at 1 hour; 24 hours: AZPS -0.2%, SRP 3.9%, TEPC 2.1%, WALC 4.0% | Gains were stated as larger than the primary model supports | Report LightGBM as primary; neural net as secondary with its own column |
 | 6 | RQ3 upper bound was quoted as "about +2%" | Largest 95% upper bound across specifications is +2.5% | Slightly optimistic bound | Quoted as +2.5% |
 | 7 | "1.06M hourly rows" reads as 1.06M hours | Those are fuel-by-hour records; the unit of analysis is 175,208 BA-hours | Overstated apparent size | Reworded |
+| 8 | EIA-930 demand contained glitches (SRP 70,313 MWh against a median of 3,407; WALC -50,457 to +94,444; 53 hours fail a plausibility rule; one AZPS net-export value of 24,000 MWh) and was used unfiltered in the marginal-emission regressions | Found by the QC step of the multi-BA scan; raw vs cleaned 6 h MEF profiles correlated 0.34 (AZPS) and -0.40 (WALC) | Several marginal-emission conclusions were wrong (AZPS and WALC stability, the marginal fuel response, the second-year scheduling result) | Plausibility rule in `marginal_emissions.load` and `interchange_analysis.mask_ne`; analyses re-run; claims corrected in `docs/MARGINAL.md`; pre-fix outputs in `results/_audit_before/*_before_demand_qc.csv`. The secondary forecast variant using demand features (`resid_demand`) was not re-run |
+| 9 | EIA-930 fuel series contained isolated spikes (SRP gas up to 69,905 MWh against a 99th percentile of 4,519; WALC hydro 94,562); `carbon_intensity.py` flagged only null fuel values | Found by comparing the estimate with measured EPA CEMS CO2 (`docs/MEASURED_EMISSIONS.md`); 105 BA-hours affected, 84 on SRP | Forecast MAE gains moved by up to 2.5 points; AZPS 2025 marginal-accounting scheduling went from 17.4% to 49.1% (ill-conditioned); the "40-55% carries over" claim was wrong | Cap at 3 times the BA-fuel 99th percentile, multiplier fixed before recomputing; all dependent outputs re-run and the old ones kept in `results/_audit_before/before_fuel_qc_2026-11-10/`. Not applied to the multi-BA scan (see `docs/MEF_SCAN.md`) |
 
 Effect of fixes 1-3 on the siting results: the old and new default rankings correlate at 0.988, 11 of the top 12
 cells are unchanged, the rank-stability numbers are unchanged (median 0.82), and AUC moved from 0.96-0.99 to
@@ -26,6 +28,7 @@ cells are unchanged, the rank-stability numbers are unchanged (median 0.82), and
 |---|---|---|
 | Residual-over-persistence design (chosen after seeing 2025 results) generalises | Rolling-origin: train 2021-22, early-stop 2023, test 2024 | Raw-level model again loses to persistence at 24 h (TEPC -56%, AZPS -13%); residual model is -3% to +6% vs persistence. Day-ahead gains stay marginal |
 | RQ3 null is not an artifact of mixing reliability-reporting standards (15% of utilities switch between IEEE and other) | Drop switchers; IEEE only; add indicator | +0.5% [-1.5, +2.5], +0.1% [-1.9, +2.2], +0.6% [-1.2, +2.5]: null holds |
+| Winsorising the RQ3 exposure at 1/99 hides the largest load surges | Re-estimate with the unclipped exposure, clipped at 99.9th percentile, and with extremes dropped (`src/rq3_power.py`) | Null holds in all four (+0.58% to +0.66% per +10% load); unclipped bound tightens to +1.9% (`docs/RQ3_POWER.md`) |
 | Weather and EIA-930 hours are aligned | Shift weather by +-1 hour and re-run the frontier | Within-day correlation of carbon with on-site water stays -0.4 to -0.6; carbon-only water effect -0.1% to +0.5%; balanced 3.7-4.1% |
 | eGRID CO2 tons are short tons | Compare reported lb/MWh rate with `PLCO2AN * 2000 / PLNGENAN` | Ratio 1.000, so short tons (907.18 kg) are correct |
 | Treating EIA-930 "other" as eGRID "other fossil" matters | Share of generation times the factor | Under 0.4% of mean carbon intensity on every BA |
@@ -45,7 +48,8 @@ cells are unchanged, the rank-stability numbers are unchanged (median 0.82), and
 | Water model: on-site curve shape, PUE 1.2, all solar as PV, gas as wet-cooled | Shifts the water side of the frontier | EIA-860 cooling types; literature fit |
 | Regulatory claims | Fact-checked by web search only | eDocket and session laws |
 | Neural net is a single seed | Differences near 1 kg/MWh are noise | Multi-seed run |
-| Carbon intensity is production-based | Not what a load actually consumes | Interchange-based intensity |
+| Carbon intensity is production-based | Not what a load actually consumes | Interchange-based intensity (done: `docs/CONSUMPTION.md`) |
+| Hourly CO2 = EIA-930 mix x annual eGRID factors | Everything in RQ1 rests on it | Tested against measured EPA CEMS CO2 (`docs/MEASURED_EMISSIONS.md`): not confirmed under the pre-specified rule on any BA (estimate 20-30% below measured on SRP, TEPC, WALC, plant attribution untested; AZPS within 5% once Four Corners (NM) is included); fuel-series glitch hours found; scheduling saving robust on SRP and WALC, sensitive on AZPS and TEPC |
 
 ## D. Checked and correct
 Panel keys (no duplicate BA-hours or utility-years), unit conversions (gal/MWh to L/kWh, short tons to kg),

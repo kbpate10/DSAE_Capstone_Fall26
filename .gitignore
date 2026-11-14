@@ -9,4 +9,3 @@ __pycache__/
 *.docx
 # pre-fix snapshots from the audit
 results/_audit_before/
-CLAUDE.md
