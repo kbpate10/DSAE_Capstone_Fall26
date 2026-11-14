@@ -1,0 +1,13 @@
+group,cell_id,ba,county,evaporative_share,on_site_Mm3_yr,gallons_million_yr,usd_million_at_0.001,usd_million_at_0.005,usd_million_at_0.01
+default Stage 1 cells,125_-438,AZPS,Cochise,1.0,2.417,638.504,0.639,3.193,6.385
+default Stage 1 cells,125_-438,AZPS,Cochise,0.5,1.208,319.252,0.319,1.596,3.193
+default Stage 1 cells,125_-438,AZPS,Cochise,0.25,0.604,159.626,0.16,0.798,1.596
+default Stage 1 cells,134_-447,SRP,Maricopa,1.0,3.245,857.238,0.857,4.286,8.572
+default Stage 1 cells,134_-447,SRP,Maricopa,0.5,1.622,428.619,0.429,2.143,4.286
+default Stage 1 cells,134_-447,SRP,Maricopa,0.25,0.811,214.31,0.214,1.072,2.143
+all BA-mapped eligible cells (min),141_-449,AZPS,Coconino,1.0,1.378,364.029,0.364,1.82,3.64
+all BA-mapped eligible cells (min),141_-449,AZPS,Coconino,0.5,0.689,182.015,0.182,0.91,1.82
+all BA-mapped eligible cells (min),141_-449,AZPS,Coconino,0.25,0.344,91.007,0.091,0.455,0.91
+all BA-mapped eligible cells (max),130_-458,AZPS,Yuma,1.0,3.565,941.773,0.942,4.709,9.418
+all BA-mapped eligible cells (max),130_-458,AZPS,Yuma,0.5,1.782,470.887,0.471,2.354,4.709
+all BA-mapped eligible cells (max),130_-458,AZPS,Yuma,0.25,0.891,235.443,0.235,1.177,2.354

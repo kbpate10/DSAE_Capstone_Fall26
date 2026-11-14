@@ -1,0 +1,11 @@
+cell_id,county,utility,ba,suitability,rank,baseline_saidi_min,carbon_kt_yr_500MW_30pct_flexible,water_Mm3_yr_500MW,policy,carbon_saved_pct,water_saved_pct
+125_-438,Cochise,ARIZONA PUBLIC SERVICE CO,AZPS,0.75,7,83.06,2050.04,8.08,naive (run immediately),0.0,0.0
+125_-438,Cochise,ARIZONA PUBLIC SERVICE CO,AZPS,0.75,7,83.06,2050.04,8.08,carbon-only,38.29,5.82
+125_-438,Cochise,ARIZONA PUBLIC SERVICE CO,AZPS,0.75,7,83.06,2050.04,8.08,balanced,37.68,6.07
+125_-438,Cochise,ARIZONA PUBLIC SERVICE CO,AZPS,0.75,7,83.06,2050.04,8.08,water-only,24.91,6.84
+125_-438,Cochise,ARIZONA PUBLIC SERVICE CO,AZPS,0.75,7,83.06,2050.04,8.08,"oracle (balanced, not deployable)",38.85,7.08
+134_-447,Maricopa,SALT RIVER PROJECT,SRP,0.4,133,49.55,852.61,10.96,naive (run immediately),0.0,0.0
+134_-447,Maricopa,SALT RIVER PROJECT,SRP,0.4,133,49.55,852.61,10.96,carbon-only,27.05,-9.7
+134_-447,Maricopa,SALT RIVER PROJECT,SRP,0.4,133,49.55,852.61,10.96,balanced,18.05,-3.81
+134_-447,Maricopa,SALT RIVER PROJECT,SRP,0.4,133,49.55,852.61,10.96,water-only,3.3,0.88
+134_-447,Maricopa,SALT RIVER PROJECT,SRP,0.4,133,49.55,852.61,10.96,"oracle (balanced, not deployable)",20.2,-1.8
