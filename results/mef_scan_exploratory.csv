@@ -1,0 +1,4 @@
+exploratory_check,n,spearman,p_one_sided
+A vs mean train MEF (denominator check),31,-0.5194,0.9986
+A vs level disagreement as % of average CI,31,0.373,0.0202
+A vs absolute level disagreement (kg/MWh),31,0.1851,0.1613

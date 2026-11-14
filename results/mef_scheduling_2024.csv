@@ -1,0 +1,7 @@
+evaluated_on,decision,AZPS,SRP,TEPC,WALC,pooled
+avg_ci,avg_persist,16.4,19.0,8.5,11.6,14.0
+avg_ci,mef_profile,-0.3,12.7,-0.4,6.4,4.6
+avg_ci,avg_oracle,18.2,21.0,10.9,18.9,17.2
+mef_eval,avg_persist,-3.8,18.6,2.6,16.1,8.3
+mef_eval,mef_profile,18.6,22.0,21.6,45.5,26.7
+mef_eval,avg_oracle,-3.8,18.5,2.7,16.1,8.3

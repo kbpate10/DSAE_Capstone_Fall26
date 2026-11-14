@@ -1,0 +1,5 @@
+respondent,hours,mean_demand,mean_net_export,resid_mean,resid_abs_med,resid_abs_p95,resid_abs_med_pct_demand,share_hours_with_interchange,import_share_of_demand_pct
+AZPS,43547,3906.655,-1463.508,3.577,0.0,823.85,0.0,0.996,37.498
+SRP,43589,3887.049,2811.245,-0.671,18.0,371.0,0.463,0.998,0.004
+TEPC,42848,1593.853,-282.747,36.663,0.0,414.0,0.0,0.998,21.415
+WALC,43403,1029.171,58.859,77.007,2.0,550.0,0.194,0.995,10.053
