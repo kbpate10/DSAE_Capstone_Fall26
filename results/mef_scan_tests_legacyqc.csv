@@ -1,0 +1,21 @@
+sample,n,predictor,metric,spearman,p_one_sided
+"VERDICT: included, excluding Arizona BAs",31,A_absorption,S_corr,-0.029,0.4386
+"VERDICT: included, excluding Arizona BAs",31,A_absorption,D_mad_pct,0.5194,0.002
+"VERDICT: included, excluding Arizona BAs",31,net_import_share,S_corr,0.0855,0.6756
+"VERDICT: included, excluding Arizona BAs",31,net_import_share,D_mad_pct,0.0931,0.31
+"VERDICT: included, excluding Arizona BAs",31,net_export_share,S_corr,-0.1827,0.1579
+"VERDICT: included, excluding Arizona BAs",31,net_export_share,D_mad_pct,0.3153,0.0431
+"VERDICT: included, excluding Arizona BAs",31,hhi,S_corr,-0.077,0.336
+"VERDICT: included, excluding Arizona BAs",31,hhi,D_mad_pct,0.2016,0.141
+"VERDICT: included, excluding Arizona BAs",31,clean_share,S_corr,-0.0577,0.3814
+"VERDICT: included, excluding Arizona BAs",31,clean_share,D_mad_pct,0.0698,0.3677
+"secondary: included, all",35,A_absorption,S_corr,-0.0866,0.3052
+"secondary: included, all",35,A_absorption,D_mad_pct,0.5417,0.0003
+"secondary: included, all",35,net_import_share,S_corr,0.0448,0.6049
+"secondary: included, all",35,net_import_share,D_mad_pct,0.1552,0.1763
+"secondary: included, all",35,net_export_share,S_corr,-0.1978,0.1259
+"secondary: included, all",35,net_export_share,D_mad_pct,0.2695,0.0578
+"secondary: included, all",35,hhi,S_corr,-0.1216,0.246
+"secondary: included, all",35,hhi,D_mad_pct,0.205,0.1172
+"secondary: included, all",35,clean_share,S_corr,-0.0804,0.3214
+"secondary: included, all",35,clean_share,D_mad_pct,0.0667,0.3494
