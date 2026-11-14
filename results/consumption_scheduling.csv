@@ -1,0 +1,5 @@
+decision,evaluated_on,AZPS,SRP,TEPC,WALC,pooled
+decide_prod,eval_prod,25.9,20.0,11.7,14.8,18.1
+decide_prod,eval_cons,20.9,17.9,15.7,2.0,14.1
+decide_cons,eval_prod,25.9,20.4,12.0,1.7,15.0
+decide_cons,eval_cons,21.0,18.4,16.6,6.2,15.5
