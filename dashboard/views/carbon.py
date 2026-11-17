@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 import core as c
+import recs
 
 c.setup("Plate 02 · Carbon")
 
@@ -271,3 +272,5 @@ st.markdown(
     "summer. The rest of a demand change is met by imports, which these in-region estimates cannot see, so the "
     f"marginal numbers describe local plants, not the whole grid {c.badge('approx', 'Association, not a causal effect')}.",
     unsafe_allow_html=True)
+
+recs.callout("Carbon")

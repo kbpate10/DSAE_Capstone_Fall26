@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 import core as c
+import recs
 
 c.setup("Plate 04 · Siting")
 
@@ -285,3 +286,5 @@ st.markdown(
     f"**Reading it.** Requiring a 230 kV substation within 30 km costs about 7% of suitability; tighter rules cost more. "
     f"This is a proximity screen only: real interconnection capacity data are not public "
     f"{c.badge('approx', 'Proximity is not capacity')}.", unsafe_allow_html=True)
+
+recs.callout("Siting")

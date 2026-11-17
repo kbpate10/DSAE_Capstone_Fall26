@@ -12,6 +12,7 @@ pages = [
     st.Page("views/water.py", title="Does clean cost water?"),
     st.Page("views/siting.py", title="Where should they go?"),
     st.Page("views/whatif.py", title="Regulator what-if"),
+    st.Page("views/recommend.py", title="Recommendations"),
     st.Page("views/about.py", title="Users, methods, assumptions"),
 ]
 with st.sidebar:

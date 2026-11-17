@@ -249,6 +249,29 @@ strong, b {{font-weight: 600;}}
 [data-testid="stExpander"] details {{border-radius: 2px !important; border-color: {RULE} !important; background: {PAPER_HI};}}
 hr {{border-color: {RULE} !important;}}
 a {{color: #B4532A !important;}}
+/* recommendations */
+.rec {{background: {PAPER_HI}; border: 1px solid {RULE}; border-left: 4px solid #B4532A; border-radius: 2px;
+       padding: 0.85rem 1rem 0.6rem 1rem; margin: 0.2rem 0 0.35rem 0;}}
+.rec-head {{display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.25rem;}}
+.rec-id {{font-weight: 700; color: #B4532A; font-size: 0.8rem; letter-spacing: 0.06em;}}
+.rec-topic {{font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: #6F675A;}}
+.rec-title {{font-family: {HEAD_FONT}; font-weight: 700; font-size: 1.12rem; line-height: 1.3; color: {INK};
+             margin-bottom: 0.45rem;}}
+.rec-body {{display: grid; grid-template-columns: minmax(84px, 26%) 1fr; gap: 0.9rem; align-items: start;}}
+.rec-num {{font-family: {HEAD_FONT}; font-weight: 700; font-size: 1.45rem; line-height: 1.15; color: #3F6B4C;
+           border-right: 1px solid {RULE}; padding-right: 0.6rem;}}
+.rec-action {{margin: 0 0 0.35rem 0;}}
+.rec-evidence {{margin: 0 0 0.3rem 0; font-size: 0.88rem; color: #4E483E;}}
+.rec-who {{margin: 0; font-size: 0.74rem; color: #7D7466; letter-spacing: 0.02em;}}
+.rec-group {{font-family: {HEAD_FONT}; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase;
+             color: #B4532A; margin: 1.1rem 0 0.4rem 0; border-bottom: 1px solid {RULE}; padding-bottom: 0.25rem;}}
+.todo {{background: {PAPER_HI}; border: 1px solid {RULE}; border-top: 3px solid #3F6B4C; border-radius: 2px;
+        padding: 0.8rem 1rem 0.4rem 1rem; margin: 1.4rem 0 0.4rem 0;}}
+.todo .who {{display: block; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: #3F6B4C;
+             font-weight: 700; margin-bottom: 0.2rem;}}
+.todo ul {{margin: 0.2rem 0 0.4rem 1.1rem;}}
+.todo li {{margin-bottom: 0.3rem;}}
+
 /* sidebar controls in white (main-page controls keep the green theme color) */
 [data-testid="stSidebar"] [data-testid="stSlider"] [role="group"] > div > div:first-child {{
     filter: grayscale(1) brightness(5);

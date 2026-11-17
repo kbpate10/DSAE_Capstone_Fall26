@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 import core as c
+import recs
 
 c.setup("Plate 01 · The grid")
 u = c.utility_load_2024()
@@ -203,3 +204,5 @@ st.markdown(
     f"But that test is weak, because mapped locations say little about how much load each utility actually took on "
     f"{c.badge('approx', 'First stage F about 2.8')}.", unsafe_allow_html=True)
 st.write("")
+
+recs.callout("Grid")

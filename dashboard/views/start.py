@@ -86,36 +86,43 @@ for col, (icon, q, big, text, page) in zip(cols, cards):
 
 st.write("")
 QUESTIONS = {
-    "Everyone": [("What happens to approvals under different rules?", "views/whatif.py"),
+    "Everyone": [("What should Arizona do, based on the evidence?", "views/recommend.py"),
+                  ("What happens to approvals under different rules?", "views/whatif.py"),
                  ("Is Arizona building more than its grid evidence covers?", "views/grid.py"),
                  ("Which choice cuts a data center's carbon most?", "views/carbon.py"),
                  ("Is there a carbon versus water tradeoff?", "views/water.py"),
                  ("Which places are both green and buildable?", "views/siting.py")],
-    "Regulator (ACC staff)": [("Which sites would our approval rules let through, and at what outage risk?", "views/whatif.py"),
+    "Regulator (ACC staff)": [("What conditions should large-load approvals carry?", "views/recommend.py"),
+                              ("Which sites would our approval rules let through, and at what outage risk?", "views/whatif.py"),
                               ("How much large load can each utility absorb before we leave tested ground?", "views/grid.py"),
                               ("How do two applications compare, e.g. Pinal vs Flagstaff?", "views/siting.py"),
                               ("Which conditions would cut a project's carbon most?", "views/carbon.py"),
                               ("What do the reliability data actually rule out?", "views/grid.py")],
-    "Lawmaker / AG office": [("Do outage limits or size caps change approvals more?", "views/whatif.py"),
+    "Lawmaker / AG office": [("Which policy options does the evidence support?", "views/recommend.py"),
+                             ("Do outage limits or size caps change approvals more?", "views/whatif.py"),
                              ("Is the pipeline normal growth or something new?", "views/grid.py"),
                              ("What would a per-gallon water surcharge cost a large campus?", "views/water.py"),
                              ("Would steering projects to certain regions cut emissions?", "views/carbon.py"),
                              ("Do the data show households losing reliability?", "views/grid.py")],
-    "Utility planner": [("How many campuses could my territory host under different rules?", "views/whatif.py"),
+    "Utility planner": [("What should we do about large-load requests?", "views/recommend.py"),
+                        ("How many campuses could my territory host under different rules?", "views/whatif.py"),
                         ("What is my utility's headroom, and how many projects fit?", "views/grid.py"),
                         ("How fast has my business load grown?", "views/grid.py"),
                         ("How dependent is my region on imports, and is it getting cleaner?", "views/carbon.py"),
                         ("Where in my territory do data centers want to be?", "views/siting.py")],
-    "Data-center operator": [("Would smaller project phases open more sites?", "views/whatif.py"),
+    "Data-center operator": [("How should we site, phase, cool and schedule a campus?", "views/recommend.py"),
+                             ("Would smaller project phases open more sites?", "views/whatif.py"),
                              ("Which region gives the lowest-carbon power, now and over time?", "views/carbon.py"),
                              ("When should flexible jobs run, by season?", "views/carbon.py"),
                              ("What is my water bill under a surcharge, and the carbon cost of saving water?", "views/water.py"),
                              ("Which sites are both buildable and environmentally sound?", "views/siting.py")],
-    "Water manager": [("How much water would a large campus use a year?", "views/water.py"),
+    "Water manager": [("Which water rules would actually reduce use?", "views/recommend.py"),
+                      ("How much water would a large campus use a year?", "views/water.py"),
                       ("Does chasing clean power raise water use?", "views/water.py"),
                       ("Where is groundwater shallow and stable versus deep?", "views/siting.py"),
                       ("Which accounting choices change the water answer?", "views/water.py")],
-    "Resident / ratepayer advocate": [("Is the grid being asked to take more than it has shown it can?", "views/grid.py"),
+    "Resident / ratepayer advocate": [("What should residents ask decision-makers for?", "views/recommend.py"),
+                                      ("Is the grid being asked to take more than it has shown it can?", "views/grid.py"),
                                       ("How much water is that in household terms?", "views/water.py"),
                                       ("Do the data show more outages where load grows?", "views/grid.py"),
                                       ("Are data centers going where people already live?", "views/siting.py")],
@@ -131,6 +138,7 @@ a.markdown("""
   live in separate tools.
 - **Levers compared in the same units.** Where to build, when to run and what it costs in water, all in tonnes
   or liters per year for the same campus.
+- **Recommendations tied to evidence.** Each action shows the number behind it and how sure we are.
 - **A regulator what-if.** Set the approval rules and see which sites pass, with their carbon, water and
   outage risk.
 - **Evidence headroom.** Instead of predicting outages, it shows how much planned growth sits beyond what

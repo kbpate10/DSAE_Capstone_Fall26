@@ -5,6 +5,7 @@ from plotly.subplots import make_subplots
 import streamlit as st
 
 import core as c
+import recs
 
 c.setup("Plate 03 · Water")
 
@@ -208,3 +209,5 @@ st.markdown(
     f"solar PV; public data do not give its hourly timing {c.badge('dep', 'Solana timing unknown')}. Every reporting "
     f"Arizona thermal plant is wet-cooled; measured gas plants use more water than the literature factor and coal "
     f"plants less.", unsafe_allow_html=True)
+
+recs.callout("Water")
