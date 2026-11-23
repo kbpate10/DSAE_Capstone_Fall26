@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 ROOT = Path(__file__).resolve().parent.parent
-R, P = ROOT / "results", ROOT / "data" / "processed"
+R, P = ROOT / "results", ROOT / "dashboard" / "data"
 
 # ---------- design tokens (green-centric) ----------
 G900, G700, G500, G200, G50 = "#1F3A2C", "#3F6B4C", "#7FA37A", "#C9D6BD", "#ECEBDD"
