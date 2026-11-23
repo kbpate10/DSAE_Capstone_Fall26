@@ -38,7 +38,7 @@ The best-scoring cell is 93 km from the nearest 230 kV substation, which puts a 
 **The node cap never binds.** At 500 MW the utility caps already allow only one APS-served and one SRP-served site, so the two selected sites never share a node.
 
 **Does the carbon-water footprint matter once interconnection binds?** Not for carbon. On the cells that pass the screen, the carbon of the selected set is 2,905 kt/yr in every case except the strictest (345 kV, 15 km, cap 1: one AZPS site, 2,051 kt), because the selection is still one
-AZPS-served and one SRP-served site. Water weighting changes which cell is picked and the water of the set moves between 17.6 and 18.2 Mm3/yr (17.99 at zero weight, 230 kV and 30 km), at a suitability cost of up to 0.2.
+AZPS-served and one SRP-served site. Water weighting changes which cell is picked and the water of the set moves between 17.6 and 18.2 Mm3/yr (18.00 at zero weight, 230 kV and 30 km), at a suitability cost of up to 0.2.
 This is the same structural result as before: utility scale decides the BA mix, and carbon cannot move it.
 
 ## Reading it honestly

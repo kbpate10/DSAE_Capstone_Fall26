@@ -15,7 +15,18 @@ One framework for three linked decisions about AI data centers in Arizona:
 [docs/EDA.md](docs/EDA.md) (exploratory analysis) and
 [docs/regulatory_context_check.md](docs/regulatory_context_check.md) (fact check of policy claims) and
 [docs/AUDIT.md](docs/AUDIT.md) (self-audit: errors fixed, assumptions tested, what remains unverified) and
-[docs/STAGE1.md](docs/STAGE1.md) (siting optimizer) and
+[docs/STAGE1.md](docs/STAGE1.md) (siting optimizer),
+[docs/STAGE2.md](docs/STAGE2.md) (siting x operating carbon and water coupling),
+[docs/MARGINAL.md](docs/MARGINAL.md) (marginal vs average emissions),
+[docs/CONSUMPTION.md](docs/CONSUMPTION.md) (consumption-based intensity by flow tracing),
+[docs/LITERATURE.md](docs/LITERATURE.md) (first-pass literature check, unverified),
+[docs/ARIZONA_CASE_STUDY.md](docs/ARIZONA_CASE_STUDY.md) (framework vs the 2026 policy debate),
+[docs/RQ3_POWER.md](docs/RQ3_POWER.md) (what the reliability data can detect),
+[docs/RQ3_DC_EXPOSURE.md](docs/RQ3_DC_EXPOSURE.md) (data-center-specific exposure),
+[docs/WATER_MEASURED.md](docs/WATER_MEASURED.md) (measured plant cooling water),
+[docs/MEF_SCAN_PREREG.md](docs/MEF_SCAN_PREREG.md) and [docs/MEF_SCAN.md](docs/MEF_SCAN.md) (pre-registered multi-BA marginal-estimate stability test and its inconclusive result),
+[docs/STAGE1_INTERCONNECTION.md](docs/STAGE1_INTERCONNECTION.md) (interconnection screen for siting) and
+[docs/MIDPOINT2_REPORT.md](docs/MIDPOINT2_REPORT.md) (Checkpoint 2 status report) and
 [docs/REVEALED_PREFERENCE.md](docs/REVEALED_PREFERENCE.md) (siting from real data-center locations).
 
 ## Layout
@@ -54,6 +65,9 @@ bash src/download_static.sh                       # eGRID, LBNL, EIA-861 files
 # RQ3: reliability
 .venv/bin/python src/rq3_model.py                 # fixed-effects ladder + robustness
 .venv/bin/python src/rq3_baseline.py              # naive baseline ladder
+.venv/bin/python src/rq3_power.py                 # power analysis and the clipped-exposure check
+.venv/bin/python src/pull_osm_datacenters_us.py && .venv/bin/python src/pull_territories_us.py   # slow: Overpass is rate-limited
+.venv/bin/python src/rq3_datacenter_exposure.py   # data-center-specific exposure
 .venv/bin/python src/bayes_rq3.py full            # PyMC hierarchical model
 .venv/bin/python src/bayes_rq3.py holdout2024     # calibration check
 
@@ -65,6 +79,22 @@ bash src/download_static.sh                       # eGRID, LBNL, EIA-861 files
 # Stage 1 siting optimizer
 .venv/bin/python src/build_territories.py        # cell -> serving utility (HIFLD polygons)
 .venv/bin/python src/stage1_optimizer.py
+.venv/bin/python src/stage1_interconnection.py   # voltage-and-proximity interconnection screen (needs OSM substations in data/raw/rq2)
+.venv/bin/python src/stage2_coupling.py        # needs water_frontier inputs and schedule_savings.csv
+.venv/bin/python src/marginal_emissions.py
+.venv/bin/python src/pull_interchange.py && .venv/bin/python src/interchange_analysis.py
+.venv/bin/python src/pull_neighbor_fuel.py && .venv/bin/python src/consumption_carbon.py
+.venv/bin/python src/mef_robustness.py          # second held-out year, weather and interchange controls
+.venv/bin/python src/pull_ba_panel.py                 # 37 BAs, 2021-2025 (slow); then:
+.venv/bin/python src/ba_stability_scan.py --qc      # data-quality diagnostics only
+.venv/bin/python src/ba_stability_scan.py           # pre-registered multi-BA test (docs/MEF_SCAN_PREREG.md)
+.venv/bin/python -I src/measured_emissions_check.py && .venv/bin/python -I src/measured_emissions_downstream.py   # estimated vs measured (EPA CEMS) CO2; docs/MEASURED_EMISSIONS.md
+
+# Checkpoint 2
+.venv/bin/python src/forecast_conformal.py      # calibrated forecast intervals (needs forecast_v2 test predictions)
+.venv/bin/python src/framework_endtoend.py      # Stage 1 -> Stage 2 end to end (needs stage1, stage2_coupling, water_frontier outputs)
+.venv/bin/python src/case_study_numbers.py
+.venv/bin/python src/make_checkpoint2_figures.py
 
 # revealed-preference siting (real data-center locations)
 .venv/bin/python src/revealed_preference.py
@@ -77,6 +107,8 @@ bash src/download_static.sh                       # eGRID, LBNL, EIA-861 files
 
 # water (preliminary) and figures
 .venv/bin/python src/pull_weather_hourly.py && .venv/bin/python src/water_frontier.py
+.venv/bin/python -I src/build_water_factors.py   # measured generation-side water from EIA-860/923 (-I: reads downloaded files)
+.venv/bin/python src/water_measured.py          # carbon-water frontier under measured factors
 .venv/bin/python src/make_midpoint_figures.py
 ```
 No GPU is needed; everything ran on a laptop CPU (Apple M4).

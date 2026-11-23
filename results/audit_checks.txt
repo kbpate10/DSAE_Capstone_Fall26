@@ -38,6 +38,6 @@ Centersquare: Phoenix - (PHX1 - Mesa)                Centersquare Maricopa   164
 
 === 3. Offset between EIA-930 hour labels and weather (carbon-only policy, pooled, 8h) ===
  weather_shift_h  corr_C_Won_AZPS  corr_C_Won_SRP  carbonOnly_carbon%  carbonOnly_water%  balanced_carbon%  balanced_water%
-              -1            -0.59           -0.53               17.71              -0.13             14.11             4.02
-               0            -0.63           -0.50               17.71              -0.11             14.27             3.68
-               1            -0.61           -0.40               17.71               0.52             14.55             4.10
+              -1            -0.59           -0.55               17.73              -0.13             14.13             4.03
+               0            -0.63           -0.51               17.73              -0.10             14.29             3.68
+               1            -0.61           -0.42               17.73               0.52             14.56             4.11

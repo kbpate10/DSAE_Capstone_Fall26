@@ -26,7 +26,7 @@ cells are unchanged, the rank-stability numbers are unchanged (median 0.82), and
 
 | Assumption | Test | Result |
 |---|---|---|
-| Residual-over-persistence design (chosen after seeing 2025 results) generalises | Rolling-origin: train 2021-22, early-stop 2023, test 2024 | Raw-level model again loses to persistence at 24 h (TEPC -56%, AZPS -13%); residual model is -3% to +6% vs persistence. Day-ahead gains stay marginal |
+| Residual-over-persistence design (chosen after seeing 2025 results) generalises | Rolling-origin: train 2021-22, early-stop 2023, test 2024 | Raw-level model again loses to persistence at 24 h (TEPC -53%, AZPS -13%); residual model is -12% to +7% vs persistence at 24 h (TEPC residual-lags is the -12%; the others are -0.3% to +7%). Day-ahead gains stay marginal. Re-run 2026-11-22 on the fuel-flagged series (8,779 test hours); the earlier file (8,784 hours, pre-flag) gave TEPC -56% and a residual range of -3% to +6% |
 | RQ3 null is not an artifact of mixing reliability-reporting standards (15% of utilities switch between IEEE and other) | Drop switchers; IEEE only; add indicator | +0.5% [-1.5, +2.5], +0.1% [-1.9, +2.2], +0.6% [-1.2, +2.5]: null holds |
 | Winsorising the RQ3 exposure at 1/99 hides the largest load surges | Re-estimate with the unclipped exposure, clipped at 99.9th percentile, and with extremes dropped (`src/rq3_power.py`) | Null holds in all four (+0.58% to +0.66% per +10% load); unclipped bound tightens to +1.9% (`docs/RQ3_POWER.md`) |
 | Weather and EIA-930 hours are aligned | Shift weather by +-1 hour and re-run the frontier | Within-day correlation of carbon with on-site water stays -0.4 to -0.6; carbon-only water effect -0.1% to +0.5%; balanced 3.7-4.1% |
