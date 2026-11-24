@@ -8,7 +8,10 @@ One framework for three linked decisions about AI data centers in Arizona:
 |---|---|---|
 | **When** to run flexible workloads (carbon, water) | Gradient-boosted + neural forecasters, scheduler | Working, evaluated on held-out 2025 |
 | **Where** to site capacity | Transparent multi-criteria score, logistic regression / LightGBM + SHAP | Baseline working (constructed label) |
-| **Who pays** (reliability for existing customers) | Fixed-effects panel regression, Bayesian hierarchical model | Working; honest null result |
+| **Who pays** (reliability for existing customers) | Fixed-effects panel regression, Bayesian hierarchical model 
+
+Dashboard: https://azdatacenterdecisiondashboard.streamlit.app/ 
+
 
 **Start here:** [docs/MIDPOINT1_REPORT.md](docs/MIDPOINT1_REPORT.md) (results and caveats) and
 [docs/data_dictionary.md](docs/data_dictionary.md) (every dataset, its coverage and cleaning rules),
