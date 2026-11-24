@@ -21,7 +21,7 @@ The decision framework links them: Stage 1 chooses sites under a utility-level r
 Public data only; solo project; one machine (CPU). Policy context and what the framework can and cannot say about it: `docs/ARIZONA_CASE_STUDY.md`.
 
 ## 2. Data
-Eight free public sources: EIA-930 hourly grid data for four Arizona balancing authorities (AZPS, SRP, TEPC, WALC), 2021-2025; EPA eGRID emission factors; EIA-861 utility panel 2013-2024 (11,845 usable utility-state-years);
+Twelve free public sources: EIA-930 hourly grid data for four Arizona balancing authorities (AZPS, SRP, TEPC, WALC), 2021-2025; EPA eGRID emission factors; EIA-861 utility panel 2013-2024 (11,845 usable utility-state-years);
 ADWR/USGS groundwater (45,985 sites); LBNL Queued Up; NASA POWER weather; OpenStreetMap data centers and substations; Census population; HIFLD utility territories; EIA-860/923 plant data. Details, cleaning rules and gaps: `docs/data_dictionary.md`, `docs/EDA.md`.
 
 Data findings that changed the design:
