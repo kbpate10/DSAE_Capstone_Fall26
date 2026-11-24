@@ -36,7 +36,7 @@ with i1:
         "for water. This tool puts that evidence in one place.")
 with i2:
     st.markdown(
-        "**What we did.** We combined eight free public datasets: hourly electricity generation for Arizona's four "
+        "**What we did.** We combined 12 free public datasets: hourly electricity generation for Arizona's four "
         "grid regions (2021 to 2025), sales and outage records for every US utility (2013 to 2024), groundwater "
         "measurements from about 46,000 Arizona well sites, weather, power-plant water use, the power-plant "
         "connection queue, and the locations of existing data centers and substations. With them we answer four "
